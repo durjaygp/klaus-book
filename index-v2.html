@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate Mexico Guide 2026 | PVCMX – Premium Edition</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* Custom premium styles */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #0B1121;
+            color: #F8FAFC;
+        }
+        .gold-glow {
+            text-shadow: 0 0 40px rgba(245, 158, 11, 0.15);
+        }
+        .gold-border {
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        }
+        .bg-dark-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .text-gold {
+            color: #F59E0B;
+        }
+        .hover-gold:hover {
+            color: #F59E0B;
+            transition: color 0.3s;
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.6);
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #F59E0B, #D97706);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+        }
+        .btn-gold:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.5);
+        }
+        .input-dark {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #F8FAFC;
+            transition: all 0.3s ease;
+        }
+        .input-dark:focus {
+            border-color: #F59E0B;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+            background: rgba(15, 23, 42, 0.9);
+        }
+        .input-dark::placeholder {
+            color: #64748B;
+        }
+        .bg-grid-pattern {
+            background-image:
+                linear-gradient(rgba(245, 158, 11, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(245, 158, 11, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        /* Mobile menu toggle */
+        #mobile-menu {
+            transition: all 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl font-extrabold tracking-tight text-white">
+                        PVCMX<span class="text-gold">.</span>
+                    </span>
+                    <span class="hidden sm:inline text-xs font-medium text-gray-400 border-l border-gray-700 pl-3">Premium Guide 2026</span>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#features" class="text-sm text-gray-300 hover:text-gold transition">Features</a>
+                    <a href="#author" class="text-sm text-gray-300 hover:text-gold transition">Author</a>
+                    <a href="#buy" class="text-sm text-gray-300 hover:text-gold transition">Buy</a>
+                    <a href="#contact" class="text-sm text-gray-300 hover:text-gold transition">Contact</a>
+                    <a href="#buy" class="bg-gold-gradient text-slate-900 font-bold text-sm px-6 py-2.5 rounded-full shadow-lg hover:shadow-gold/30 transition-all hover:scale-105">
+                        <i class="fas fa-cart-shopping mr-2"></i>Get It Now
+                    </a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden bg-slate-900/95 backdrop-blur-lg rounded-2xl mt-2 px-6 py-4 border border-white/5">
+                <div class="flex flex-col gap-4 text-sm">
+                    <a href="#features" class="text-gray-300 hover:text-gold transition">Features</a>
+                    <a href="#author" class="text-gray-300 hover:text-gold transition">Author</a>
+                    <a href="#buy" class="text-gray-300 hover:text-gold transition">Buy</a>
+                    <a href="#contact" class="text-gray-300 hover:text-gold transition">Contact</a>
+                    <a href="#buy" class="bg-gold-gradient text-center text-slate-900 font-bold px-4 py-2.5 rounded-full">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="relative min-h-screen flex items-center overflow-hidden bg-slate-900 bg-grid-pattern pt-20">
+        <!-- Glow effects -->
+        <div class="absolute top-1/4 left-1/3 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Content -->
+                <div class="fade-up">
+                    <div class="inline-flex items-center gap-2 bg-slate-800/80 backdrop-blur-sm border border-gold/20 rounded-full px-4 py-1.5 text-xs font-semibold text-gold tracking-wider mb-6">
+                        <i class="fas fa-crown text-xs"></i> 2026 PREMIUM EDITION
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white gold-glow">
+                        The Ultimate Guide to <br />
+                        <span class="text-gold">Mexico</span>
+                    </h1>
+                    <p class="mt-5 text-lg text-gray-300 max-w-lg leading-relaxed">
+                        Relocating, retiring, investing &amp; doing business — a practical handbook written by an international entrepreneur who made the move.
+                    </p>
+                    <div class="mt-8 flex flex-wrap items-center gap-4">
+                        <a href="#buy" class="btn-gold text-slate-900 font-bold px-8 py-4 rounded-full text-lg shadow-2xl flex items-center gap-3 transition-all">
+                            <i class="fas fa-download"></i> Download Now
+                            <span class="text-sm font-normal opacity-80">$39 USD</span>
+                        </a>
+                        <span class="text-sm text-gray-400 flex items-center gap-1.5">
+                            <i class="fas fa-check-circle text-gold"></i> Instant PDF
+                        </span>
+                    </div>
+                    <div class="mt-8 flex flex-wrap gap-6 text-sm text-gray-400">
+                        <span><i class="fas fa-file-pdf text-gold mr-2"></i> 90+ pages</span>
+                        <span><i class="fas fa-list-check text-gold mr-2"></i> Actionable checklists</span>
+                        <span><i class="fas fa-star text-gold mr-2"></i> 4.9/5 rating</span>
+                    </div>
+                </div>
+
+                <!-- Right Book Mockup -->
+                <div class="flex justify-center lg:justify-end fade-up" style="transition-delay: 0.15s;">
+                    <div class="relative w-72 sm:w-80 lg:w-96">
+                        <div class="glass-card rounded-2xl p-6 shadow-2xl hover-lift border-gold/10">
+                            <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 border border-white/5">
+                                <div class="flex items-start justify-between">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-gold">PVCMX</span>
+                                    <span class="text-xs bg-gold/20 text-gold px-3 py-1 rounded-full">2026</span>
+                                </div>
+                                <h3 class="mt-4 text-2xl font-extrabold text-white leading-tight">The Ultimate Guide</h3>
+                                <p class="text-sm text-gray-300 mt-1">Relocating · Retiring · Investing · Business</p>
+                                <div class="mt-6 flex items-center gap-3 text-sm text-gray-300">
+                                    <i class="fas fa-user-circle text-2xl text-gold"></i>
+                                    <span>Klaus Sichelschmidt</span>
+                                </div>
+                                <div class="mt-4 flex gap-2 flex-wrap">
+                                    <span class="text-xs bg-white/5 border border-white/10 px-3 py-1 rounded-full text-gray-300">Puerto Vallarta</span>
+                                    <span class="text-xs bg-white/5 border border-white/10 px-3 py-1 rounded-full text-gray-300">Mexico</span>
+                                </div>
+                                <div class="mt-6 flex justify-between items-center border-t border-white/10 pt-4 text-xs text-gray-400">
+                                    <span><i class="fas fa-book-open text-gold mr-1.5"></i> 19 Chapters</span>
+                                    <span><i class="fas fa-check-circle text-gold mr-1.5"></i> Practical</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-center text-xs text-gray-400">
+                                <span class="text-gold"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                <span class="ml-2">“The only guide you'll need before moving”</span>
+                            </div>
+                        </div>
+                        <!-- Floating badge -->
+                        <div class="absolute -top-3 -right-3 bg-gold-gradient text-slate-900 text-xs font-extrabold px-4 py-2 rounded-full shadow-xl rotate-3 flex items-center gap-1.5">
+                            <i class="fas fa-gem"></i> Premium
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section id="features" class="py-24 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto fade-up">
+                <span class="text-gold text-sm font-semibold uppercase tracking-wider"><i class="fas fa-cube mr-2"></i>What's Inside</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Everything You Need to Know</h2>
+                <p class="mt-3 text-gray-400 text-lg">From residency to daily life — 19 chapters of expert, firsthand insights.</p>
+            </div>
+            <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900/60 rounded-2xl p-6 border border-white/5 hover:border-gold/30 transition-all hover-lift fade-up" style="transition-delay:0.05s;">
+                    <div class="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-2xl mb-5">
+                        <i class="fas fa-house-chimney"></i>
+                    </div>
+                    <h3 class="font-bold text-white">Housing &amp; Relocation</h3>
+                    <p class="text-sm text-gray-400 mt-2">Rent vs. buy, neighborhood guides, and the critical first 12 months.</p>
+                </div>
+                <div class="bg-slate-900/60 rounded-2xl p-6 border border-white/5 hover:border-gold/30 transition-all hover-lift fade-up" style="transition-delay:0.1s;">
+                    <div class="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-2xl mb-5">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3 class="font-bold text-white">Residency &amp; Visas</h3>
+                    <p class="text-sm text-gray-400 mt-2">Temporary, permanent, and the latest 2026 financial requirements.</p>
+                </div>
+                <div class="bg-slate-900/60 rounded-2xl p-6 border border-white/5 hover:border-gold/30 transition-all hover-lift fade-up" style="transition-delay:0.15s;">
+                    <div class="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-2xl mb-5">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3 class="font-bold text-white">Healthcare &amp; Insurance</h3>
+                    <p class="text-sm text-gray-400 mt-2">Public, private, and medical tourism — with cost comparisons.</p>
+                </div>
+                <div class="bg-slate-900/60 rounded-2xl p-6 border border-white/5 hover:border-gold/30 transition-all hover-lift fade-up" style="transition-delay:0.2s;">
+                    <div class="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-2xl mb-5">
+                        <i class="fas fa-building-columns"></i>
+                    </div>
+                    <h3 class="font-bold text-white">Banking &amp; Business</h3>
+                    <p class="text-sm text-gray-400 mt-2">Open accounts, start a business, and invest with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AUTHOR ===== -->
+    <section id="author" class="py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 fade-up">
+                    <span class="text-gold text-sm font-semibold uppercase tracking-wider"><i class="fas fa-feather-alt mr-2"></i>About the Author</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Klaus Sichelschmidt</h2>
+                    <p class="mt-5 text-gray-300 leading-relaxed">
+                        Klaus has lived and conducted business across the United States, Germany, Italy, China, Chile, and Mexico. He first visited Puerto Vallarta in 1999 and made it his home after decades of international experience.
+                    </p>
+                    <p class="mt-4 text-gray-300 leading-relaxed">
+                        This guide distills his personal journey — the challenges, the mistakes, and the wins — into a practical roadmap for anyone considering life, retirement, or business in Mexico.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <span class="bg-slate-800 px-4 py-2 rounded-full text-sm border border-white/5 text-gray-300"><i class="fas fa-check-circle text-gold mr-1.5"></i> 2026 Edition</span>
+                        <span class="bg-slate-800 px-4 py-2 rounded-full text-sm border border-white/5 text-gray-300"><i class="fas fa-file-pdf text-gold mr-1.5"></i> Instant Access</span>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center fade-up" style="transition-delay:0.15s;">
+                    <div class="bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 border border-white/5 w-full max-w-sm hover-lift">
+                        <div class="flex items-center gap-5">
+                            <div class="w-20 h-20 bg-gold-gradient rounded-full flex items-center justify-center text-slate-900 text-3xl font-bold shadow-xl shadow-gold/20">
+                                KS
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Klaus Sichelschmidt</h4>
+                                <p class="text-sm text-gold">Founder, PVCMX</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-sm text-gray-400 border-t border-white/10 pt-6">
+                            <i class="fas fa-quote-left text-gold/50 mr-2"></i>
+                            “Reality often differs from perception. This guide helps you see Mexico clearly.”
+                        </div>
+                        <div class="mt-4 flex gap-4 text-xs text-gray-500">
+                            <span><i class="fas fa-map-pin text-gold"></i> Puerto Vallarta</span>
+                            <span><i class="fas fa-calendar-check text-gold"></i> Since 1999</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BUY SECTION ===== -->
+    <section id="buy" class="py-24 bg-slate-800/30 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gold/5 blur-3xl pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center fade-up">
+                <span class="text-gold text-sm font-semibold uppercase tracking-wider"><i class="fas fa-tag mr-2"></i>Get Your Copy</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Start Your Mexico Journey Today</h2>
+                <p class="mt-3 text-gray-400 max-w-xl mx-auto">Instant digital download. Read on any device, share with your partner, and plan with confidence.</p>
+            </div>
+            <div class="mt-12 max-w-md mx-auto">
+                <div class="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover-lift fade-up">
+                    <div class="bg-gold-gradient px-6 py-4 flex items-center justify-between">
+                        <span class="font-bold text-slate-900 text-lg">2026 Premium Edition</span>
+                        <span class="bg-slate-900/20 text-slate-900 text-xs px-3 py-1 rounded-full font-bold">PDF + Checklist</span>
+                    </div>
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-baseline justify-center gap-3">
+                            <span class="text-5xl font-extrabold text-white">$39</span>
+                            <span class="text-gray-500 line-through text-xl">$59</span>
+                            <span class="bg-gold/20 text-gold text-xs font-bold px-3 py-1 rounded-full">Save 34%</span>
+                        </div>
+                        <ul class="mt-6 space-y-3 text-sm text-gray-300">
+                            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gold mt-0.5"></i> Full 90+ page guide (PDF)</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gold mt-0.5"></i> Bonus: 12-month relocation checklist</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gold mt-0.5"></i> Cost of living comparison tables</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gold mt-0.5"></i> Residency &amp; visa requirement summary</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gold mt-0.5"></i> Free updates for 2026</li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="#" class="block w-full btn-gold text-slate-900 text-center font-bold py-4 px-6 rounded-xl text-lg shadow-2xl transition-all">
+                                <i class="fas fa-cart-shopping mr-3"></i> Buy Now — $39 USD
+                            </a>
+                            <p class="text-center text-xs text-gray-500 mt-3">
+                                <i class="fas fa-lock mr-1 text-gold"></i> Secure checkout · Instant access
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-sm text-gray-500 mt-6 fade-up">
+                    <i class="fas fa-arrow-right text-gold mr-2"></i> 100% money-back guarantee · Read on any device
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-up">
+                <h2 class="text-3xl font-bold text-white">What Readers Say</h2>
+                <p class="text-gray-400 mt-2">Real stories from expats who used this guide.</p>
+            </div>
+            <div class="mt-12 grid sm:grid-cols-3 gap-6">
+                <div class="bg-slate-800/50 rounded-2xl p-6 border border-white/5 hover:border-gold/30 transition-all hover-lift fade-up">
+                    <div class="flex text-gold text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="mt-3 text-sm text-gray-300 italic">“This guide saved me thousands of dollars and months of headaches. Klaus knows his stuff.”</p>
+                    <p class="mt-4 text-sm font-semibold text-white">— Michael R., Canada</p>
+                </div>
+                <div class="bg-slate-800/50 rounded-2xl p-6 border border-white/5 hover:border-gold/30 transition-all hover-lift fade-up" style="transition-delay:0.08s;">
+                    <div class="flex text-gold text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="mt-3 text-sm text-gray-300 italic">“The residency chapter alone is worth the price. Everything is explained clearly.”</p>
+                    <p class="mt-4 text-sm font-semibold text-white">— Sarah K., USA</p>
+                </div>
+                <div class="bg-slate-800/50 rounded-2xl p-6 border border-white/5 hover:border-gold/30 transition-all hover-lift fade-up" style="transition-delay:0.16s;">
+                    <div class="flex text-gold text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="mt-3 text-sm text-gray-300 italic">“We used this to plan our move to Puerto Vallarta. Absolutely essential.”</p>
+                    <p class="mt-4 text-sm font-semibold text-white">— David &amp; Elena, UK</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT FORM ===== -->
+    <section id="contact" class="py-24 bg-slate-800/40 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <!-- Left Info -->
+                <div class="fade-up">
+                    <span class="text-gold text-sm font-semibold uppercase tracking-wider"><i class="fas fa-paper-plane mr-2"></i>Get in Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Still Have Questions?</h2>
+                    <p class="mt-4 text-gray-300 leading-relaxed">
+                        We're here to help. Reach out to PVCMX for personalized guidance on your relocation, retirement, or business journey in Mexico.
+                    </p>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center gap-4 text-gray-300">
+                            <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-gold text-xl"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <p class="text-sm text-gray-400">Email</p>
+                                <a href="mailto:klaus@pvcmx.com" class="font-medium hover:text-gold transition">klaus@pvcmx.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-300">
+                            <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-gold text-xl"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <p class="text-sm text-gray-400">Phone</p>
+                                <a href="tel:+523222270206" class="font-medium hover:text-gold transition">+52 (322) 227-0206</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-300">
+                            <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-gold text-xl"><i class="fas fa-location-dot"></i></div>
+                            <div>
+                                <p class="text-sm text-gray-400">Location</p>
+                                <span class="font-medium">Puerto Vallarta, Jalisco, Mexico</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex gap-3">
+                        <span class="bg-slate-800 px-4 py-2 rounded-full text-xs border border-white/5 text-gray-300"><i class="fas fa-shield-halved text-gold mr-1.5"></i> Confidential</span>
+                        <span class="bg-slate-800 px-4 py-2 rounded-full text-xs border border-white/5 text-gray-300"><i class="fas fa-clock text-gold mr-1.5"></i> Response within 24h</span>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border-gold/10 fade-up" style="transition-delay:0.15s;">
+                    <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
+                    <form id="contactForm" class="space-y-5">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1.5">Full Name</label>
+                            <input type="text" id="name" placeholder="e.g. John Doe" required class="w-full input-dark rounded-xl px-4 py-3 text-sm focus:ring-0">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1.5">Email Address</label>
+                            <input type="email" id="email" placeholder="john@example.com" required class="w-full input-dark rounded-xl px-4 py-3 text-sm focus:ring-0">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1.5">Your Message</label>
+                            <textarea id="message" rows="4" placeholder="Tell us about your plans or questions..." required class="w-full input-dark rounded-xl px-4 py-3 text-sm focus:ring-0 resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full btn-gold text-slate-900 font-bold py-3.5 px-6 rounded-xl text-base shadow-lg transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <p id="formFeedback" class="text-center text-sm mt-2 h-5 text-gold"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="py-10 border-t border-white/5 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+                <a href="#" class="hover:text-gold transition">Privacy Policy</a>
+                <a href="#" class="hover:text-gold transition">Terms of Use</a>
+                <span>© 2026 PVCMX · All rights reserved</span>
+            </div>
+            <p class="mt-3 text-xs text-gray-600">Puerto Vallarta Consultants of Mexico · Your trusted partner for relocation, retirement, and business in Mexico.</p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        (function() {
+            // --- SCROLL ANIMATIONS ---
+            const faders = document.querySelectorAll('.fade-up');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            faders.forEach(el => observer.observe(el));
+
+            // --- HEADER SCROLL EFFECT ---
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    header.classList.add('bg-slate-900/90', 'backdrop-blur-lg', 'border-b', 'border-white/5');
+                    header.classList.remove('bg-transparent');
+                } else {
+                    header.classList.remove('bg-slate-900/90', 'backdrop-blur-lg', 'border-b', 'border-white/5');
+                    header.classList.add('bg-transparent');
+                }
+            });
+
+            // --- MOBILE MENU TOGGLE ---
+            const toggleBtn = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            let menuOpen = false;
+
+            toggleBtn.addEventListener('click', () => {
+                menuOpen = !menuOpen;
+                mobileMenu.classList.toggle('open', menuOpen);
+                toggleBtn.innerHTML = menuOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    menuOpen = false;
+                    toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+
+            // --- CONTACT FORM HANDLER ---
+            const form = document.getElementById('contactForm');
+            const feedback = document.getElementById('formFeedback');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (!name || !email || !message) {
+                    feedback.textContent = '⚠️ Please fill in all fields.';
+                    feedback.style.color = '#F87171';
+                    return;
+                }
+
+                // Simple email validation
+                if (!email.includes('@') || !email.includes('.')) {
+                    feedback.textContent = '⚠️ Please enter a valid email address.';
+                    feedback.style.color = '#F87171';
+                    return;
+                }
+
+                // Success simulation
+                feedback.textContent = '✅ Message sent! We\'ll get back to you shortly.';
+                feedback.style.color = '#F59E0B';
+                form.reset();
+
+                // Reset feedback after 5 seconds
+                setTimeout(() => {
+                    feedback.textContent = '';
+                }, 5000);
+            });
+
+            // Smooth anchor scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        e.preventDefault();
+                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+        })();
+    </script>
+
+</body>
+</html>
