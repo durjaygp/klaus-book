@@ -92,18 +92,11 @@
             animation: float 5s ease-in-out infinite;
         }
 
-        /* ── hero background with subtle pattern ── */
+        /* ── hero background with sunset image ── */
         .hero-bg {
-            background: linear-gradient(160deg, #003d26 0%, #006341 45%, #1a7a4a 80%, #004d2e 100%);
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85)), url('assets/header.jpeg') center/cover no-repeat;
             position: relative;
             overflow: hidden;
-        }
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            pointer-events: none;
         }
 
         /* radial glow */
@@ -226,6 +219,19 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
         }
+
+        /* ── accordion ── */
+        .accordion-item.active {
+            border-color: var(--green-dark);
+            box-shadow: 0 10px 25px -5px rgba(0, 99, 65, 0.1);
+        }
+        .accordion-item:hover:not(.active) {
+            border-color: var(--green-mid);
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+            color: var(--green-dark);
+        }
     </style>
 </head>
 <body>
@@ -246,10 +252,10 @@
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#features" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Features</a>
                     <a href="#author" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Author</a>
-                    <a href="#buy" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Buy</a>
+                    <a href="#download" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Download</a>
                     <a href="#contact" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Contact</a>
-                    <a href="#buy" class="btn-mexican text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105">
-                        <i class="fas fa-cart-shopping mr-2"></i>Get It Now
+                    <a href="#download" class="btn-mexican text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105">
+                        <i class="fas fa-download mr-2"></i>Download Free
                     </a>
                 </div>
 
@@ -264,9 +270,9 @@
                 <div class="flex flex-col gap-3 text-sm">
                     <a href="#features" class="text-white/80 hover:text-white transition font-medium nav-link">Features</a>
                     <a href="#author" class="text-white/80 hover:text-white transition font-medium nav-link">Author</a>
-                    <a href="#buy" class="text-white/80 hover:text-white transition font-medium nav-link">Buy</a>
+                    <a href="#download" class="text-white/80 hover:text-white transition font-medium nav-link">Download</a>
                     <a href="#contact" class="text-white/80 hover:text-white transition font-medium nav-link">Contact</a>
-                    <a href="#buy" class="btn-mexican text-center text-white font-bold px-4 py-2.5 rounded-full mt-1">Buy Now</a>
+                    <a href="#download" class="btn-mexican text-center text-white font-bold px-4 py-2.5 rounded-full mt-1">Download Free</a>
                 </div>
             </div>
         </div>
@@ -291,13 +297,22 @@
                         The Ultimate Guide to <br />
                         <span class="text-[#CE1126]">Mexico</span>
                     </h1>
-                    <p class="mt-5 text-lg text-white/90 max-w-lg leading-relaxed font-medium" style="font-family: 'Inter', sans-serif;">
-                        Relocating, retiring, investing &amp; doing business — a practical handbook written by an international entrepreneur who made the move.
+                    <p class="mt-5 text-xl text-white font-bold max-w-lg" style="font-family: 'Poppins', sans-serif;">
+                        Helping You Build Your Future in Mexico
                     </p>
+                    <ul class="mt-4 grid sm:grid-cols-2 gap-y-3 gap-x-6 text-sm text-white/90 font-medium" style="font-family: 'Inter', sans-serif;">
+                        <li class="flex items-center gap-2">🏡 Relocation &amp; Retirement</li>
+                        <li class="flex items-center gap-2">🛂 Residency &amp; Immigration</li>
+                        <li class="flex items-center gap-2">🏠 Real Estate &amp; Housing</li>
+                        <li class="flex items-center gap-2">🏦 Banking &amp; Financial Integration</li>
+                        <li class="flex items-center gap-2">🏥 Healthcare &amp; Insurance</li>
+                        <li class="flex items-center gap-2">🏢 Business Formation &amp; Investment</li>
+                        <li class="flex items-center gap-2 col-span-full sm:col-span-1">🤝 Trusted Professional Network</li>
+                    </ul>
                     <div class="mt-8 flex flex-wrap items-center gap-4">
-                        <a href="#buy" class="btn-mexican text-white font-bold px-8 py-4 rounded-full text-lg shadow-2xl flex items-center gap-3 transition-all">
-                            <i class="fas fa-download"></i> Download Now
-                            <span class="text-sm font-normal opacity-80">$39 USD</span>
+                        <a href="#download" class="btn-mexican text-white font-bold px-8 py-4 rounded-full text-lg shadow-2xl flex items-center gap-3 transition-all">
+                            <i class="fas fa-download"></i> Download Free
+                            <span class="text-sm font-normal opacity-80">(or Donate)</span>
                         </a>
                         <span class="text-sm text-white/80 flex items-center gap-1.5 font-medium" style="font-family: 'Inter', sans-serif;">
                             <i class="fas fa-check-circle text-[#CE1126]"></i> Instant PDF
@@ -344,6 +359,26 @@
                             <i class="fas fa-gem"></i> Premium
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ VIDEO ════════════ -->
+    <section id="video" class="py-20 bg-[#F9FAFB] border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-up">
+                <span class="text-[#006341] text-sm font-bold uppercase tracking-wider section-label"><i class="fas fa-video mr-2"></i>Welcome</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">A Message from Klaus</h2>
+                <p class="mt-3 text-slate-600 max-w-2xl mx-auto text-lg" style="font-family: 'Inter', sans-serif;">Discover how we can help you navigate your journey to Mexico.</p>
+            </div>
+            
+            <div class="mt-12 fade-up" style="transition-delay:0.1s;">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900">
+                    <video class="w-full h-auto aspect-video object-cover" controls preload="metadata">
+                        <source src="assets/low-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
@@ -433,6 +468,189 @@
         </div>
     </section>
 
+
+    <!-- ════════════ FAQ ════════════ -->
+     <!-- 
+    
+        <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-up">
+                <span class="text-[#006341] text-sm font-bold uppercase tracking-wider section-label"><i class="fas fa-question-circle mr-2"></i>FAQ</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Questions You're Probably Asking Yourself...</h2>
+                <p class="mt-3 text-slate-600 max-w-2xl mx-auto text-lg" style="font-family: 'Inter', sans-serif;">Everything you need to know before making the move.</p>
+            </div>
+            
+            <div class="mt-12 space-y-4 fade-up">
+             
+                
+                <div class="bg-[#F9FAFB] border border-slate-200 rounded-2xl overflow-hidden accordion-item transition-all duration-300">
+                    <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none accordion-btn hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900" style="font-family: 'Poppins', sans-serif;">🛂 Can I Legally Stay in Mexico?</h3>
+                            <p class="text-[#006341] font-semibold mt-1 text-sm" style="font-family: 'Inter', sans-serif;">✅ Yes, you can.</p>
+                        </div>
+                        <div class="text-slate-400 transform transition-transform duration-300 accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 pt-2 text-slate-600 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">
+                            Mexico offers several residency options depending on your personal circumstances, financial qualifications, and long-term goals. PVCMX helps you understand the available pathways and connects you with trusted immigration professionals who can guide you through the process.
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="bg-[#F9FAFB] border border-slate-200 rounded-2xl overflow-hidden accordion-item transition-all duration-300">
+                    <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none accordion-btn hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900" style="font-family: 'Poppins', sans-serif;">🏡 Where Should I Live?</h3>
+                            <p class="text-[#006341] font-semibold mt-1 text-sm" style="font-family: 'Inter', sans-serif;">📍 The best place depends on you.</p>
+                        </div>
+                        <div class="text-slate-400 transform transition-transform duration-300 accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 pt-2 text-slate-600 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">
+                            Whether you prefer beachfront living, a vibrant city atmosphere, a quiet retirement community, or an exclusive golf development, PVCMX helps you identify the location that best matches your lifestyle, budget, and future plans.
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="bg-[#F9FAFB] border border-slate-200 rounded-2xl overflow-hidden accordion-item transition-all duration-300">
+                    <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none accordion-btn hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900" style="font-family: 'Poppins', sans-serif;">🏠 Can I Buy Property?</h3>
+                            <p class="text-[#006341] font-semibold mt-1 text-sm" style="font-family: 'Inter', sans-serif;">✅ Yes, foreigners can own property in Mexico.</p>
+                        </div>
+                        <div class="text-slate-400 transform transition-transform duration-300 accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 pt-2 text-slate-600 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">
+                            Depending on the property's location and intended use, special ownership structures may apply. PVCMX helps you understand the process and connects you with trusted real estate professionals and legal advisors before you make one of life's most important investments.
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="bg-[#F9FAFB] border border-slate-200 rounded-2xl overflow-hidden accordion-item transition-all duration-300">
+                    <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none accordion-btn hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900" style="font-family: 'Poppins', sans-serif;">🏦 Can I Open a Mexican Bank Account?</h3>
+                            <p class="text-[#006341] font-semibold mt-1 text-sm" style="font-family: 'Inter', sans-serif;">✅ In most cases, yes.</p>
+                        </div>
+                        <div class="text-slate-400 transform transition-transform duration-300 accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 pt-2 text-slate-600 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">
+                            Opening a local bank account can simplify daily life, reduce currency exchange costs, and support property ownership or business operations. PVCMX helps you understand the requirements and introduces you to banking professionals suited to your individual needs.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-[#F9FAFB] border border-slate-200 rounded-2xl overflow-hidden accordion-item transition-all duration-300">
+                    <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none accordion-btn hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900" style="font-family: 'Poppins', sans-serif;">🏥 What About Healthcare?</h3>
+                            <p class="text-[#006341] font-semibold mt-1 text-sm" style="font-family: 'Inter', sans-serif;">❤️ Mexico offers excellent healthcare options.</p>
+                        </div>
+                        <div class="text-slate-400 transform transition-transform duration-300 accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 pt-2 text-slate-600 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">
+                            Many expatriates are pleasantly surprised by the quality, professionalism, and affordability of both public and private healthcare services. PVCMX helps you explore healthcare providers, insurance solutions, and medical resources that best fit your individual circumstances.
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="bg-[#F9FAFB] border border-slate-200 rounded-2xl overflow-hidden accordion-item transition-all duration-300">
+                    <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none accordion-btn hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900" style="font-family: 'Poppins', sans-serif;">🚗 Can I Bring My Vehicle?</h3>
+                            <p class="text-[#006341] font-semibold mt-1 text-sm" style="font-family: 'Inter', sans-serif;">✅ In many cases, yes.</p>
+                        </div>
+                        <div class="text-slate-400 transform transition-transform duration-300 accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 pt-2 text-slate-600 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">
+                            Vehicle importation depends on your residency status, the type of vehicle, and current regulations. Our experienced team can help you understand the process and, when needed, coordinate with trusted customs and registration specialists to make your transition as smooth as possible.
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="bg-[#F9FAFB] border border-slate-200 rounded-2xl overflow-hidden accordion-item transition-all duration-300">
+                    <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none accordion-btn hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900" style="font-family: 'Poppins', sans-serif;">💼 Should I Start a Business?</h3>
+                            <p class="text-[#006341] font-semibold mt-1 text-sm" style="font-family: 'Inter', sans-serif;">🚀 Mexico offers outstanding opportunities for entrepreneurs.</p>
+                        </div>
+                        <div class="text-slate-400 transform transition-transform duration-300 accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 pt-2 text-slate-600 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">
+                            Whether you're planning a small consulting business, opening a restaurant, investing in real estate, or launching a larger commercial venture, PVCMX helps you evaluate your options and coordinates the professionals needed to establish your business with confidence.
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="bg-[#F9FAFB] border border-slate-200 rounded-2xl overflow-hidden accordion-item transition-all duration-300">
+                    <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none accordion-btn hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900" style="font-family: 'Poppins', sans-serif;">🗣️ Do I Need to Speak Spanish?</h3>
+                            <p class="text-[#006341] font-semibold mt-1 text-sm" style="font-family: 'Inter', sans-serif;">🙂 No—not to get started.</p>
+                        </div>
+                        <div class="text-slate-400 transform transition-transform duration-300 accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 pt-2 text-slate-600 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">
+                            Many foreign residents enjoy life in Puerto Vallarta while speaking little or no Spanish, especially in areas with well-established international communities. Learning even basic Spanish, however, can enrich your daily experiences, strengthen relationships, and help you feel more connected to your new home.
+                        </div>
+                    </div>
+                </div>
+
+ 
+                
+                <div class="bg-[#F9FAFB] border border-slate-200 rounded-2xl overflow-hidden accordion-item transition-all duration-300">
+                    <button class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none accordion-btn hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900" style="font-family: 'Poppins', sans-serif;">🤝 Who Can Help Me Navigate All of This?</h3>
+                            <p class="text-[#006341] font-semibold mt-1 text-sm" style="font-family: 'Inter', sans-serif;">⭐ That's exactly why PVCMX exists.</p>
+                        </div>
+                        <div class="text-slate-400 transform transition-transform duration-300 accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 pt-2 text-slate-600 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">
+                            Relocating to another country involves many important decisions. PVCMX serves as your trusted guide by helping you understand your options, coordinating with experienced professionals, and simplifying the journey—so you can focus on building your future in Mexico with confidence.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+     -->
+
     <!-- ════════════ AUTHOR ════════════ -->
     <section id="author" class="py-20 bg-[#004d2e]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -454,8 +672,8 @@
                 <div class="order-1 md:order-2 flex justify-center fade-up" style="transition-delay:0.15s;">
                     <div class="bg-green-900/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 w-full max-w-sm hover-lift text-center">
                         <div class="relative inline-block">
-                            <div class="w-32 h-32 rounded-full bg-gradient-to-br from-[#006341] to-[#CE1126] flex items-center justify-center text-white text-5xl font-bold shadow-xl shadow-green-500/30 mx-auto" style="font-family: 'Poppins', sans-serif;">
-                                KS
+                            <div class="w-32 h-32 rounded-full shadow-xl shadow-green-500/30 mx-auto overflow-hidden border-4 border-[#006341]">
+                                <img src="assets/profile_picture.jpg" alt="Klaus Sichelschmidt" class="w-full h-full object-cover">
                             </div>
                             <div class="absolute bottom-0 right-0 bg-white rounded-full p-1.5 shadow-md">
                                 <i class="fas fa-check-circle text-[#006341] text-sm"></i>
@@ -477,8 +695,8 @@
         </div>
     </section>
 
-    <!-- ════════════ BUY ════════════ -->
-    <section id="buy" class="py-20 bg-[#F9FAFB] relative overflow-hidden">
+    <!-- ════════════ DOWNLOAD ════════════ -->
+    <section id="download" class="py-20 bg-[#F9FAFB] relative overflow-hidden">
         <div class="absolute inset-0 bg-green-500/5 blur-3xl pointer-events-none"></div>
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center fade-up">
@@ -493,13 +711,12 @@
                         <span class="bg-white/25 text-white text-xs px-3 py-1 rounded-full font-bold" style="font-family: 'Poppins', sans-serif;">PDF + Checklist</span>
                     </div>
                     <div class="p-6 sm:p-8">
-                        <div class="flex items-baseline justify-center gap-3">
-                            <span class="text-5xl font-extrabold text-slate-900" style="font-family: 'Poppins', sans-serif;">$39</span>
-                            <span class="text-slate-400 line-through text-xl" style="font-family: 'Inter', sans-serif;">$59</span>
-                            <span class="bg-green-100 text-[#006341] text-xs font-bold px-3 py-1 rounded-full" style="font-family: 'Poppins', sans-serif;">Save 34%</span>
+                        <div class="flex flex-col items-center justify-center gap-1">
+                            <span class="text-5xl font-extrabold text-slate-900" style="font-family: 'Poppins', sans-serif;">Free</span>
+                            <span class="text-slate-500 text-sm mt-1" style="font-family: 'Inter', sans-serif;">Donations appreciated</span>
                         </div>
-                        <div class="mt-2 text-center text-xs text-[#CE1126] font-semibold animate-pulse" style="font-family: 'Inter', sans-serif;">
-                            ⚡ Limited time offer
+                        <div class="mt-3 text-center text-xs text-[#006341] font-semibold" style="font-family: 'Inter', sans-serif;">
+                            Available for immediate download
                         </div>
                         <ul class="mt-6 space-y-3 text-sm text-slate-700" style="font-family: 'Inter', sans-serif;">
                             <li class="flex items-start gap-3"><i class="fas fa-check-circle text-[#006341] mt-0.5 text-base"></i> Full 90+ page guide (PDF)</li>
@@ -508,18 +725,21 @@
                             <li class="flex items-start gap-3"><i class="fas fa-check-circle text-[#006341] mt-0.5 text-base"></i> Residency &amp; visa requirement summary</li>
                             <li class="flex items-start gap-3"><i class="fas fa-check-circle text-[#006341] mt-0.5 text-base"></i> Free updates for 2026</li>
                         </ul>
-                        <div class="mt-8">
+                        <div class="mt-8 flex flex-col gap-3">
                             <a href="#" class="block w-full btn-mexican text-white text-center font-bold py-4 px-6 rounded-xl text-lg shadow-2xl transition-all">
-                                <i class="fas fa-cart-shopping mr-3"></i> Buy Now — $39 USD
+                                <i class="fas fa-download mr-3"></i> Download Guide
                             </a>
-                            <p class="text-center text-xs text-slate-500 mt-3 font-medium" style="font-family: 'Inter', sans-serif;">
-                                <i class="fas fa-lock mr-1 text-[#006341]"></i> Secure checkout · Instant access
+                            <a href="#" class="block w-full bg-white border-2 border-slate-200 text-slate-700 text-center font-bold py-3 px-6 rounded-xl text-md hover:border-[#006341] hover:text-[#006341] transition-all">
+                                <i class="fas fa-heart mr-2 text-[#CE1126]"></i> Support with a Donation
+                            </a>
+                            <p class="text-center text-xs text-slate-500 mt-2 font-medium" style="font-family: 'Inter', sans-serif;">
+                                Instant access · No signup required
                             </p>
                         </div>
                     </div>
                 </div>
                 <p class="text-center text-sm text-slate-600 mt-6 fade-up font-medium" style="font-family: 'Inter', sans-serif;">
-                    <i class="fas fa-arrow-right text-[#CE1126] mr-2"></i> 100% money-back guarantee · Read on any device
+                    <i class="fas fa-arrow-right text-[#CE1126] mr-2"></i> 100% free · Read on any device
                 </p>
             </div>
         </div>
@@ -552,7 +772,7 @@
                             <div class="flex text-[#CE1126] text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         </div>
                     </div>
-                    <p class="mt-3 text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Inter', sans-serif;">“The residency chapter alone is worth the price. Everything is explained clearly.”</p>
+                    <p class="mt-3 text-sm text-slate-700 italic leading-relaxed" style="font-family: 'Inter', sans-serif;">“The residency chapter alone is incredibly valuable. Everything is explained clearly.”</p>
                     <p class="mt-2 text-xs text-slate-500" style="font-family: 'Inter', sans-serif;">USA</p>
                 </div>
                 <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#006341] transition-all card-hover fade-up" style="transition-delay:0.16s;">
@@ -603,6 +823,13 @@
                                 <span class="font-bold text-slate-800" style="font-family: 'Inter', sans-serif;">Puerto Vallarta, Jalisco, Mexico</span>
                             </div>
                         </div>
+                        <div class="flex items-center gap-4 text-slate-700">
+                            <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-[#006341] text-xl"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <p class="text-sm text-slate-500 font-medium" style="font-family: 'Inter', sans-serif;">Time Zone</p>
+                                <span class="font-bold text-slate-800" style="font-family: 'Inter', sans-serif;">Central Time (CT)</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="mt-8 flex gap-3 flex-wrap">
                         <span class="bg-green-50 px-4 py-2 rounded-full text-xs border border-green-200 text-slate-700 font-medium" style="font-family: 'Inter', sans-serif;"><i class="fas fa-shield-halved text-[#006341] mr-1.5"></i> Confidential</span>
@@ -620,6 +847,10 @@
                         <div>
                             <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Email Address</label>
                             <input type="email" id="email" placeholder="john@example.com" required class="w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" placeholder="+1 (555) 000-0000" class="w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0">
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Your Message</label>
@@ -744,6 +975,33 @@
                 form.reset();
 
                 setTimeout(() => { feedback.textContent = ''; }, 5000);
+            });
+
+            // ── Accordion ──
+            const accordionBtns = document.querySelectorAll('.accordion-btn');
+            accordionBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const item = this.parentElement;
+                    const content = this.nextElementSibling;
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all others
+                    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                        }
+                    });
+
+                    // Toggle current
+                    if (isActive) {
+                        item.classList.remove('active');
+                        content.style.maxHeight = null;
+                    } else {
+                        item.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
             });
 
             // ── Smooth anchor scroll ──
