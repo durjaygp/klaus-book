@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ultimate Mexico Guide 2026 | PVCMX – Professional Fonts</title>
+    <title>Ultimate Mexico Guide 2026 | PVCMX</title>
     <!-- Google Fonts: Professional pairing → Poppins (headings) + Inter (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -239,23 +239,21 @@
     <!-- ════════════ HEADER ════════════ -->
     <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 md:h-20">
+            <div class="flex items-center justify-between h-20 md:h-24">
                 <!-- Logo -->
                 <div class="flex items-center gap-2">
-                    <span class="text-2xl font-extrabold tracking-tight text-white" style="font-family: 'Poppins', sans-serif;">
-                        PVCMX<span class="text-[#CE1126]">.</span>
-                    </span>
-                    <span class="hidden sm:inline text-xs font-medium text-white/70 border-l border-white/20 pl-3" style="font-family: 'Inter', sans-serif;">Premium Guide 2026</span>
+                    <a href="#" class="inline-block transition-transform hover:scale-105">
+                        <img src="assets/Logo.png" alt="PVCMX Logo" class="h-14 sm:h-16 md:h-20 w-auto object-contain">
+                    </a>
                 </div>
 
                 <!-- Desktop Nav -->
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#features" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Features</a>
                     <a href="#author" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Author</a>
-                    <a href="#download" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Download</a>
                     <a href="#contact" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Contact</a>
-                    <a href="#download" class="btn-mexican text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105">
-                        <i class="fas fa-download mr-2"></i>Download Free
+                    <a href="#donate" class="btn-mexican text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105">
+                        <i class="fas fa-mug-hot mr-2"></i>Buy Me a Coffee
                     </a>
                 </div>
 
@@ -270,9 +268,8 @@
                 <div class="flex flex-col gap-3 text-sm">
                     <a href="#features" class="text-white/80 hover:text-white transition font-medium nav-link">Features</a>
                     <a href="#author" class="text-white/80 hover:text-white transition font-medium nav-link">Author</a>
-                    <a href="#download" class="text-white/80 hover:text-white transition font-medium nav-link">Download</a>
                     <a href="#contact" class="text-white/80 hover:text-white transition font-medium nav-link">Contact</a>
-                    <a href="#download" class="btn-mexican text-center text-white font-bold px-4 py-2.5 rounded-full mt-1">Download Free</a>
+                    <a href="#donate" class="btn-mexican text-center text-white font-bold px-4 py-2.5 rounded-full mt-1"><i class="fas fa-mug-hot mr-2"></i>Buy Me a Coffee</a>
                 </div>
             </div>
         </div>
@@ -309,55 +306,43 @@
                         <li class="flex items-center gap-2">🏢 Business Formation &amp; Investment</li>
                         <li class="flex items-center gap-2 col-span-full sm:col-span-1">🤝 Trusted Professional Network</li>
                     </ul>
-                    <div class="mt-8 flex flex-wrap items-center gap-4">
-                        <a href="#download" class="btn-mexican text-white font-bold px-8 py-4 rounded-full text-lg shadow-2xl flex items-center gap-3 transition-all">
-                            <i class="fas fa-download"></i> Download Free
-                            <span class="text-sm font-normal opacity-80">(or Donate)</span>
+                    <div class="mt-8 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
+                        <a href="#donate" class="btn-mexican text-white font-bold px-8 py-4 rounded-full text-lg shadow-2xl flex items-center gap-3 transition-all">
+                            <i class="fas fa-mug-hot"></i> Buy Me a Coffee
                         </a>
-                        <span class="text-sm text-white/80 flex items-center gap-1.5 font-medium" style="font-family: 'Inter', sans-serif;">
-                            <i class="fas fa-check-circle text-[#CE1126]"></i> Instant PDF
-                        </span>
-                    </div>
-                    <div class="mt-8 flex flex-wrap gap-6 text-sm text-white/80 font-medium" style="font-family: 'Inter', sans-serif;">
-                        <span><i class="fas fa-file-pdf text-[#CE1126] mr-2"></i> 90+ pages</span>
-                        <span><i class="fas fa-list-check text-[#CE1126] mr-2"></i> Actionable checklists</span>
-                        <span><i class="fas fa-star text-yellow-400 mr-2"></i> 4.9 / 5 rating</span>
+                        <button onclick="openModal()" class="text-white hover:text-white/80 transition underline font-medium flex items-center gap-2 text-sm sm:text-base mt-2 sm:mt-0" style="font-family: 'Inter', sans-serif;">
+                            <i class="fas fa-book-open"></i> How can I receive the Ultimate PVCMX Handbook?
+                        </button>
                     </div>
                 </div>
 
-                <!-- Right: Book Mockup with floating animation -->
-                <div class="flex justify-center lg:justify-end fade-up float-animate" style="transition-delay: 0.15s;">
-                    <div class="relative w-72 sm:w-80 lg:w-96">
-                        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-2xl hover-lift border border-white/15">
-                            <div class="bg-gradient-to-br from-green-900 to-green-800 rounded-xl p-6 border border-white/20">
-                                <div class="flex items-start justify-between">
-                                    <span class="text-xs font-bold uppercase tracking-wider text-white/80" style="font-family: 'Poppins', sans-serif;">PVCMX</span>
-                                    <span class="text-xs bg-red-500/30 text-white px-3 py-1 rounded-full font-bold" style="font-family: 'Poppins', sans-serif;">2026</span>
-                                </div>
-                                <h3 class="mt-4 text-2xl font-extrabold text-white leading-tight">The Ultimate Guide</h3>
-                                <p class="text-sm text-white/80 mt-1 font-medium" style="font-family: 'Inter', sans-serif;">Relocating · Retiring · Investing · Business</p>
-                                <div class="mt-6 flex items-center gap-3 text-sm text-white/80" style="font-family: 'Inter', sans-serif;">
-                                    <i class="fas fa-user-circle text-2xl text-[#CE1126]"></i>
-                                    <span class="font-medium">Klaus Sichelschmidt</span>
-                                </div>
-                                <div class="mt-4 flex gap-2 flex-wrap">
-                                    <span class="text-xs bg-white/10 border border-white/20 px-3 py-1 rounded-full text-white/90 font-medium" style="font-family: 'Inter', sans-serif;">Puerto Vallarta</span>
-                                    <span class="text-xs bg-white/10 border border-white/20 px-3 py-1 rounded-full text-white/90 font-medium" style="font-family: 'Inter', sans-serif;">Mexico</span>
-                                </div>
-                                <div class="mt-6 flex justify-between items-center border-t border-white/20 pt-4 text-xs text-white/70 font-medium" style="font-family: 'Inter', sans-serif;">
-                                    <span><i class="fas fa-book-open text-[#CE1126] mr-1.5"></i> 19 Chapters</span>
-                                    <span><i class="fas fa-check-circle text-[#CE1126] mr-1.5"></i> Practical</span>
-                                </div>
+                <!-- Right: Consultation Form -->
+                <div class="flex justify-center lg:justify-end fade-up" style="transition-delay: 0.15s;">
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full max-w-md border border-white/20 relative z-10 text-left">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Schedule Your Consultation</h3>
+                        <p class="text-sm text-slate-600 mb-6" style="font-family: 'Inter', sans-serif;">Book a free discovery call to discuss your plans for Mexico.</p>
+                        <form class="space-y-4 contact-form">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1" style="font-family: 'Inter', sans-serif;">Full Name</label>
+                                <input type="text" placeholder="e.g. John Doe" required class="input-name w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#006341] focus:border-[#006341] outline-none transition-all text-slate-900">
                             </div>
-                            <div class="mt-4 text-center text-xs text-white/80 font-medium" style="font-family: 'Inter', sans-serif;">
-                                <span class="text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                                <span class="ml-2">“The only guide you'll need before moving”</span>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1" style="font-family: 'Inter', sans-serif;">Email Address</label>
+                                <input type="email" placeholder="john@example.com" required class="input-email w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#006341] focus:border-[#006341] outline-none transition-all text-slate-900">
                             </div>
-                        </div>
-                        <!-- Floating badge -->
-                        <div class="absolute -top-3 -right-3 bg-gradient-to-r from-[#CE1126] to-[#B71C1C] text-white text-xs font-extrabold px-4 py-2 rounded-full shadow-xl rotate-3 flex items-center gap-1.5 badge-pulse" style="font-family: 'Poppins', sans-serif;">
-                            <i class="fas fa-gem"></i> Premium
-                        </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1" style="font-family: 'Inter', sans-serif;">Phone Number (Optional)</label>
+                                <input type="tel" placeholder="+1 (555) 000-0000" class="input-phone w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#006341] focus:border-[#006341] outline-none transition-all text-slate-900">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1" style="font-family: 'Inter', sans-serif;">What would you like to discuss?</label>
+                                <textarea rows="3" placeholder="Tell us about your plans..." required class="input-message w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#006341] focus:border-[#006341] outline-none transition-all text-slate-900 resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-mexican text-white font-bold py-3.5 px-6 rounded-xl text-base shadow-lg transition-all flex items-center justify-center gap-2 mt-2">
+                                <i class="fas fa-calendar-check"></i> Book Consultation
+                            </button>
+                            <p class="form-feedback text-center text-sm mt-2 h-5 font-medium text-[#006341]" style="font-family: 'Inter', sans-serif;"></p>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -374,11 +359,9 @@
             </div>
             
             <div class="mt-12 fade-up" style="transition-delay:0.1s;">
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900">
-                    <video class="w-full h-auto aspect-video object-cover" controls preload="metadata">
-                        <source src="assets/low-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 aspect-video">
+                  
+                    <iframe class="w-full h-full absolute inset-0" src="https://www.youtube.com/embed/0HEMap6cg2g" title="Could You Live in Mexico?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -839,27 +822,27 @@
 
                 <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xl shadow-green-500/5 fade-up" style="transition-delay:0.15s;">
                     <h3 class="text-2xl font-bold text-slate-900 mb-6">Send a Message</h3>
-                    <form id="contactForm" class="space-y-5">
+                    <form class="space-y-5 contact-form">
                         <div>
-                            <label for="name" class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Full Name</label>
-                            <input type="text" id="name" placeholder="e.g. John Doe" required class="w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0">
+                            <label class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Full Name</label>
+                            <input type="text" placeholder="e.g. John Doe" required class="input-name w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Email Address</label>
-                            <input type="email" id="email" placeholder="john@example.com" required class="w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0">
+                            <label class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Email Address</label>
+                            <input type="email" placeholder="john@example.com" required class="input-email w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0">
                         </div>
                         <div>
-                            <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Phone Number (Optional)</label>
-                            <input type="tel" id="phone" placeholder="+1 (555) 000-0000" class="w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0">
+                            <label class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Phone Number (Optional)</label>
+                            <input type="tel" placeholder="+1 (555) 000-0000" class="input-phone w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0">
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Your Message</label>
-                            <textarea id="message" rows="4" placeholder="Tell us about your plans or questions..." required class="w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0 resize-none"></textarea>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Your Message</label>
+                            <textarea rows="4" placeholder="Tell us about your plans or questions..." required class="input-message w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0 resize-none"></textarea>
                         </div>
                         <button type="submit" class="w-full btn-mexican text-white font-bold py-3.5 px-6 rounded-xl text-base shadow-lg transition-all flex items-center justify-center gap-2">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
-                        <p id="formFeedback" class="text-center text-sm mt-2 h-5 font-medium text-[#006341]" style="font-family: 'Inter', sans-serif;"></p>
+                        <p class="form-feedback text-center text-sm mt-2 h-5 font-medium text-[#006341]" style="font-family: 'Inter', sans-serif;"></p>
                     </form>
                 </div>
             </div>
@@ -948,33 +931,35 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ── Contact form ──
-            const form = document.getElementById('contactForm');
-            const feedback = document.getElementById('formFeedback');
+            // ── Contact forms ──
+            const forms = document.querySelectorAll('.contact-form');
 
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
+            forms.forEach(form => {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const feedback = form.querySelector('.form-feedback');
+                    const name = form.querySelector('.input-name').value.trim();
+                    const email = form.querySelector('.input-email').value.trim();
+                    const message = form.querySelector('.input-message').value.trim();
 
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const message = document.getElementById('message').value.trim();
+                    if (!name || !email || !message) {
+                        feedback.textContent = '⚠️ Please fill in all fields.';
+                        feedback.style.color = '#CE1126';
+                        return;
+                    }
+                    if (!email.includes('@') || !email.includes('.')) {
+                        feedback.textContent = '⚠️ Please enter a valid email address.';
+                        feedback.style.color = '#CE1126';
+                        return;
+                    }
 
-                if (!name || !email || !message) {
-                    feedback.textContent = '⚠️ Please fill in all fields.';
-                    feedback.style.color = '#CE1126';
-                    return;
-                }
-                if (!email.includes('@') || !email.includes('.')) {
-                    feedback.textContent = '⚠️ Please enter a valid email address.';
-                    feedback.style.color = '#CE1126';
-                    return;
-                }
+                    feedback.textContent = '✅ Message sent! We\'ll get back to you shortly.';
+                    feedback.style.color = '#006341';
+                    form.reset();
 
-                feedback.textContent = '✅ Message sent! We\'ll get back to you shortly.';
-                feedback.style.color = '#006341';
-                form.reset();
-
-                setTimeout(() => { feedback.textContent = ''; }, 5000);
+                    setTimeout(() => { feedback.textContent = ''; }, 5000);
+                });
             });
 
             // ── Accordion ──
@@ -1017,8 +1002,66 @@
                 });
             });
 
+            // ── Modal ──
+            window.openModal = function() {
+                const modal = document.getElementById('handbookModal');
+                const content = document.getElementById('modalContent');
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    content.classList.remove('scale-95', 'opacity-0');
+                    content.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            };
+            window.closeModal = function() {
+                const modal = document.getElementById('handbookModal');
+                const content = document.getElementById('modalContent');
+                content.classList.remove('scale-100', 'opacity-100');
+                content.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }, 300);
+            };
+
         })();
     </script>
+
+    <!-- ════════════ HANDBOOK MODAL ════════════ -->
+    <div id="handbookModal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+        
+        <!-- Modal Content -->
+        <div class="bg-white rounded-2xl w-full max-w-lg mx-4 relative z-10 shadow-2xl border border-slate-200 overflow-hidden scale-95 opacity-0 transition-all duration-300 transform" id="modalContent">
+            <!-- Header -->
+            <div class="bg-green-50 px-6 py-4 border-b border-green-100 flex items-center justify-between">
+                <h3 class="font-bold text-slate-900 text-lg flex items-center gap-2">
+                    <i class="fas fa-book text-[#006341]"></i> Obtaining the Handbook
+                </h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 transition">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <!-- Body -->
+            <div class="p-6">
+                <p class="text-slate-600 mb-4 leading-relaxed" style="font-family: 'Inter', sans-serif;">
+                    The Ultimate PVCMX Handbook is exclusively provided to our clients to ensure the information is perfectly tailored to your specific situation. 
+                </p>
+                <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 mb-6">
+                    <h4 class="font-semibold text-slate-800 text-sm mb-2">How it works:</h4>
+                    <ol class="list-decimal list-inside text-sm text-slate-600 space-y-2" style="font-family: 'Inter', sans-serif;">
+                        <li>Schedule a free consultation using the form.</li>
+                        <li>We discuss your unique goals and timeline on a call.</li>
+                        <li>You receive the complete handbook customized for your journey.</li>
+                    </ol>
+                </div>
+                <button onclick="closeModal(); document.querySelector('.contact-form').scrollIntoView({behavior: 'smooth'})" class="w-full btn-mexican text-white font-bold py-3 px-4 rounded-xl text-center shadow-md transition-all">
+                    Schedule Your Call Now
+                </button>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
