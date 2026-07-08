@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | PVCMX</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* Base styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F9FAFB;
+            color: #0F172A;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        h1 { font-weight: 900; }
+        h2 { font-weight: 800; }
+        h3, h4 { font-weight: 700; }
+
+        :root {
+            --green-dark: #006341;
+            --green-mid: #2E7D32;
+            --red: #CE1126;
+        }
+        
+        /* Navbar styles */
+        .nav-link { font-family: 'Poppins', sans-serif; font-weight: 500; }
+        .btn-mexican {
+            background: linear-gradient(135deg, var(--green-dark), var(--red));
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 99, 65, 0.35);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        .btn-mexican:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(206, 17, 38, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ════════════ HEADER ════════════ -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-green-950/90 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 md:h-24">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <a href="index-v4.html" class="inline-block transition-transform hover:scale-105">
+                        <img src="assets/Logo.png" alt="PVCMX Logo" class="h-14 sm:h-16 md:h-20 w-auto object-contain">
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index-v4.html#features" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Features</a>
+                    <a href="index-v4.html#author" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Author</a>
+                    <a href="index-v4.html#contact" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Contact</a>
+                    <a href="index-v4.html#donate" class="btn-mexican text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105">
+                        <i class="fas fa-mug-hot mr-2"></i>Buy Me a Coffee
+                    </a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-green-950/95 backdrop-blur-xl rounded-2xl mt-2 px-6 py-4 border border-white/10">
+                <div class="flex flex-col gap-3 text-sm">
+                    <a href="index-v4.html#features" class="text-white/80 hover:text-white transition font-medium nav-link">Features</a>
+                    <a href="index-v4.html#author" class="text-white/80 hover:text-white transition font-medium nav-link">Author</a>
+                    <a href="index-v4.html#contact" class="text-white/80 hover:text-white transition font-medium nav-link">Contact</a>
+                    <a href="index-v4.html#donate" class="btn-mexican text-center text-white font-bold px-4 py-2.5 rounded-full mt-1"><i class="fas fa-mug-hot mr-2"></i>Buy Me a Coffee</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ════════════ CONTENT ════════════ -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-3xl shadow-xl p-8 sm:p-12 border border-slate-200">
+            <h1 class="text-4xl font-extrabold text-slate-900 mb-2">Privacy Policy</h1>
+            <p class="text-slate-500 font-medium mb-8">Last updated: July 2026</p>
+            
+            <div class="text-slate-700 leading-relaxed space-y-6" style="font-family: 'Inter', sans-serif;">
+                <p>PVCMX respects your privacy and is committed to protecting the personal information you provide when visiting www.pvcmx.com, downloading our handbook, contacting us, requesting information, or using our consulting and referral services.</p>
+                
+                <p>This Privacy Policy explains what information we collect, how we use it, when it may be shared, and the choices available to you.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">1. Who Is Responsible for Your Personal Information?</h2>
+                <p>For purposes of applicable Mexican data-protection law, the party responsible for collecting and processing your personal information is:</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <strong>PVCMX</strong><br>
+                    Operated by: Klaus Sichelschmidt<br>
+                    Location: Puerto Vallarta and Bahía de Banderas region, Mexico<br>
+                    Email: <a href="mailto:legal@rola-mex.com.mx" class="text-[#006341] font-medium hover:underline">legal@rola-mex.com.mx</a><br>
+                    Telephone or WhatsApp: +52-322-779-9610
+                </div>
+                <p>Questions regarding this Privacy Policy or the use of your personal information may be sent to the email address above.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">2. Information We May Collect</h2>
+                <p>Depending on how you interact with PVCMX, we may collect the following information:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Your name</li>
+                    <li>Email address</li>
+                    <li>Telephone or WhatsApp number</li>
+                    <li>Country of citizenship or current country of residence</li>
+                    <li>Preferred language</li>
+                    <li>Expected relocation or travel timeframe</li>
+                    <li>General information about your interest in living, retiring, investing, purchasing or renting property, opening a business, obtaining residency, importing a vehicle, or receiving other assistance in Mexico</li>
+                    <li>Information included voluntarily in messages, consultation requests, questionnaires, or correspondence</li>
+                    <li>Records of communications with PVCMX</li>
+                    <li>Payment and transaction information when purchasing a handbook, consultation, or service</li>
+                    <li>Technical information such as IP address, browser type, device type, referring website, pages visited, and approximate location</li>
+                    <li>Cookie and website-usage information</li>
+                </ul>
+                <p class="bg-amber-50 text-amber-900 p-4 rounded-xl border border-amber-200 text-sm mt-4">
+                    PVCMX does not intentionally request sensitive personal information through the general website contact form. Please do not submit passport copies, immigration documents, financial account information, medical records, government identification numbers, or other sensitive documents unless PVCMX specifically requests them through an appropriate and secure method.
+                </p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">3. How We Use Your Information</h2>
+                <p>PVCMX may use your personal information for the following primary purposes:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>To respond to your questions and contact requests</li>
+                    <li>To schedule and provide consultations</li>
+                    <li>To understand your relocation, retirement, property, immigration, business, healthcare, transportation, or lifestyle needs</li>
+                    <li>To provide information about PVCMX services</li>
+                    <li>To deliver purchased digital products, including the PVCMX Handbook</li>
+                    <li>To prepare proposals, service recommendations, or cost estimates</li>
+                    <li>To coordinate services requested by you</li>
+                    <li>To refer or introduce you to appropriate independent professionals or service providers</li>
+                    <li>To maintain records of communications, consultations, purchases, and services</li>
+                    <li>To process payments and issue confirmations or receipts</li>
+                    <li>To provide customer support</li>
+                    <li>To operate, secure, troubleshoot, and improve the website</li>
+                    <li>To comply with legal, tax, regulatory, accounting, or administrative obligations</li>
+                    <li>To prevent fraud, misuse, security incidents, or unlawful activity</li>
+                </ul>
+                <p class="mt-4">With your consent, PVCMX may also use your contact information for secondary purposes, including:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Sending newsletters, relocation information, handbook updates, service announcements, or educational content</li>
+                    <li>Informing you about new PVCMX services, events, videos, publications, or promotional offers</li>
+                    <li>Requesting feedback or testimonials</li>
+                </ul>
+                <p>You may opt out of promotional communications at any time by using the unsubscribe option provided, when available, or by emailing <a href="mailto:legal@rola-mex.com.mx" class="text-[#006341] font-medium hover:underline">legal@rola-mex.com.mx</a>.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">4. Legal Basis and Consent</h2>
+                <p>By voluntarily submitting information through the PVCMX website, email, telephone, WhatsApp, consultation forms, purchase forms, or other communication channels, you consent to the collection and use of your information for the purposes described in this Privacy Policy.</p>
+                <p>Where consent is not legally required, PVCMX may process information when necessary to:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Respond to a request made by you</li>
+                    <li>Provide a product or service you have requested</li>
+                    <li>Perform or prepare a contractual relationship</li>
+                    <li>Comply with legal obligations</li>
+                    <li>Protect the rights, property, safety, and legitimate interests of PVCMX, its clients, or others</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">5. Sharing Information with Professionals and Service Providers</h2>
+                <p>PVCMX may share relevant personal information with third parties when reasonably necessary to respond to your request or provide a service.</p>
+                <p>These third parties may include:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Mexican attorneys and immigration professionals</li>
+                    <li>Accountants and tax advisers</li>
+                    <li>Licensed real-estate professionals</li>
+                    <li>Insurance agents or brokers</li>
+                    <li>Healthcare providers or healthcare advisers</li>
+                    <li>Vehicle-importation, registration, or licensing specialists</li>
+                    <li>Notaries, translators, relocation professionals, and other independent consultants</li>
+                    <li>Website-hosting, email, cloud-storage, scheduling, payment-processing, analytics, and technical-service providers</li>
+                    <li>Government authorities when disclosure is required by law</li>
+                </ul>
+                <p>PVCMX will seek to share only the information reasonably necessary for the applicable purpose.</p>
+                <p><strong>PVCMX does not sell or rent personal information to third parties.</strong></p>
+                <p>Independent professionals introduced through PVCMX may maintain their own privacy policies and may be independently responsible for the information you provide directly to them.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">6. International Data Transfers</h2>
+                <p>Some website, email, cloud-storage, payment, analytics, scheduling, or communication providers used by PVCMX may operate servers or process information outside Mexico, including in the United States or other countries.</p>
+                <p>As a result, personal information may be stored or processed in jurisdictions with data-protection rules different from those applicable in Mexico. PVCMX will use reasonable measures to work with reputable providers and protect personal information consistent with this Privacy Policy and applicable law.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">7. Payments</h2>
+                <p>Payments made through the website may be processed by an independent payment provider.</p>
+                <p>PVCMX may receive information such as your name, email address, payment status, transaction amount, transaction date, and payment reference. PVCMX does not ordinarily receive or store your complete credit- or debit-card number when payment is processed directly by an independent payment provider.</p>
+                <p>The payment provider's own privacy policy and terms will also apply.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">8. Cookies and Similar Technologies</h2>
+                <p>The PVCMX website may use cookies and similar technologies to:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Enable essential website functions</li>
+                    <li>Remember preferences</li>
+                    <li>Understand how visitors use the website</li>
+                    <li>Improve performance and usability</li>
+                    <li>Measure traffic and visitor engagement</li>
+                    <li>Protect the website from abuse or security threats</li>
+                </ul>
+                <p>Some cookies may be placed by third-party service providers, such as website-hosting platforms, embedded video providers, analytics services, scheduling systems, maps, or payment processors.</p>
+                <p>You may configure your browser to reject or delete cookies. However, disabling certain cookies may affect website functionality.</p>
+                <p>Where required, the website will provide a cookie notice or consent mechanism allowing visitors to manage nonessential cookies.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">9. Analytics and Third-Party Content</h2>
+                <p>PVCMX may use website analytics tools to understand general traffic and usage patterns. These tools may collect technical information such as IP address, browser type, device information, approximate location, visit duration, and pages viewed.</p>
+                <p>The website may also contain links to or embedded content from third-party websites and platforms, including YouTube, Facebook, Instagram, TikTok, Google Maps, scheduling providers, or payment services.</p>
+                <p>PVCMX does not control the privacy practices of those third parties. Visitors should review the privacy policies of any third-party website or platform they use.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">10. Data Security</h2>
+                <p>PVCMX uses reasonable administrative, technical, and organizational safeguards intended to protect personal information against unauthorized access, misuse, alteration, disclosure, loss, or destruction.</p>
+                <p>Nevertheless, no website, email system, cloud service, internet transmission, or electronic-storage method can be guaranteed to be completely secure. You should avoid sending highly sensitive documents through ordinary email or an unsecured website form.</p>
+                <p>Mexican privacy rules require responsible parties to maintain administrative, physical, and technical safeguards appropriate to the personal information being handled.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">11. Retention of Information</h2>
+                <p>PVCMX retains personal information only for as long as reasonably necessary to:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Respond to inquiries</li>
+                    <li>Provide requested services</li>
+                    <li>Maintain client and business records</li>
+                    <li>Fulfill contractual obligations</li>
+                    <li>Comply with legal, tax, accounting, and regulatory requirements</li>
+                    <li>Resolve disputes</li>
+                    <li>Protect legal rights</li>
+                    <li>Prevent fraud or misuse</li>
+                </ul>
+                <p>When information is no longer reasonably required, PVCMX may delete it, anonymize it, or securely archive it when continued retention is legally necessary.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">12. Your Privacy Rights</h2>
+                <p>Subject to applicable law, you may request to:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Access the personal information PVCMX holds about you</li>
+                    <li>Rectify inaccurate or incomplete information</li>
+                    <li>Cancel or request deletion of information when legally appropriate</li>
+                    <li>Object to certain uses of your information</li>
+                    <li>Withdraw consent for future processing where processing is based on consent</li>
+                    <li>Limit the use or disclosure of your personal information</li>
+                    <li>Stop receiving promotional communications</li>
+                </ul>
+                <p>These are commonly known in Mexico as ARCO rights: Access, Rectification, Cancellation, and Opposition.</p>
+                <p>To submit a request, email <a href="mailto:legal@rola-mex.com.mx" class="text-[#006341] font-medium hover:underline">legal@rola-mex.com.mx</a> with the subject line:</p>
+                <p class="font-semibold">Privacy Request – ARCO Rights</p>
+                <p>Your request should include:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Your full name</li>
+                    <li>A description of the information or processing involved</li>
+                    <li>The right you wish to exercise</li>
+                    <li>A reliable method for contacting you</li>
+                    <li>Sufficient information to confirm your identity</li>
+                </ul>
+                <p>PVCMX may request additional information solely to verify identity and protect personal information from unauthorized requests.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">13. Limiting Marketing Communications</h2>
+                <p>You may ask PVCMX not to use your information for marketing, advertising, or promotional communications by emailing:</p>
+                <p><a href="mailto:legal@rola-mex.com.mx" class="text-[#006341] font-medium hover:underline">legal@rola-mex.com.mx</a></p>
+                <p>Please use the subject line:</p>
+                <p class="font-semibold">Opt Out of PVCMX Communications</p>
+                <p>Transactional messages relating to consultations, purchases, services, appointments, security, legal notices, or existing business relationships may still be sent when necessary.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">14. Information About Other People</h2>
+                <p>When you provide personal information about a spouse, family member, business partner, employee, or another person, you confirm that you are authorized to provide the information or that the person has consented to its disclosure.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">15. Children's Privacy</h2>
+                <p>The PVCMX website and services are intended for adults and are not directed to children under 18.</p>
+                <p>PVCMX does not knowingly collect personal information directly from children. A parent or legal guardian who believes that a child has submitted personal information may contact <a href="mailto:legal@rola-mex.com.mx" class="text-[#006341] font-medium hover:underline">legal@rola-mex.com.mx</a> to request its review or deletion.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">16. External Links</h2>
+                <p>The PVCMX website may link to independent websites operated by attorneys, real-estate professionals, government agencies, healthcare providers, insurers, transportation providers, financial institutions, or other organizations.</p>
+                <p>PVCMX is not responsible for the content, security, availability, or privacy practices of external websites.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">17. Changes to This Privacy Policy</h2>
+                <p>PVCMX may update this Privacy Policy periodically to reflect:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Changes in website functions</li>
+                    <li>New services or technologies</li>
+                    <li>Changes in service providers</li>
+                    <li>Changes in data-processing practices</li>
+                    <li>Changes in applicable legal requirements</li>
+                </ul>
+                <p>The revised policy will be published on this page with an updated effective date. Material changes may also be communicated through the website or by email when appropriate.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">18. Contact PVCMX</h2>
+                <p>Questions, concerns, complaints, consent withdrawals, or privacy-rights requests may be directed to:</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <strong>PVCMX</strong><br>
+                    Lic. Ulises M Santiago Ochoa, Attorney at Law<br>
+                    Puerto Vallarta and Bahía de Banderas region, Mexico<br>
+                    Email: <a href="mailto:legal@rola-mex.com.mx" class="text-[#006341] font-medium hover:underline">legal@rola-mex.com.mx</a><br>
+                    Telephone or WhatsApp: +52 (322) 779-9610<br>
+                    Website: <a href="https://www.pvcmx.com" class="text-[#006341] font-medium hover:underline" target="_blank">www.pvcmx.com</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ════════════ FOOTER ════════════ -->
+    <footer class="py-10 border-t border-white/10 bg-[#004d2e]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-white/70 font-medium" style="font-family: 'Inter', sans-serif;">
+                <a href="privacy-policy.html" class="text-white font-bold transition">Privacy Policy</a>
+                <a href="terms-of-use.html" class="hover:text-white transition">Terms of Use</a>
+                <span>© 2026 PVCMX · All rights reserved</span>
+            </div>
+            <p class="mt-3 text-xs text-white/40 font-medium" style="font-family: 'Inter', sans-serif;">Puerto Vallarta Consultants of Mexico · Your trusted partner for relocation, retirement, and business in Mexico.</p>
+            <div class="mt-4 flex justify-center gap-4 text-white/40 text-sm">
+                <a href="https://www.facebook.com/PVCMX/" target="_blank" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ════════════ JAVASCRIPT ════════════ -->
+    <script>
+        (function() {
+            "use strict";
+            // ── Mobile menu toggle ──
+            const toggleBtn = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            let menuOpen = false;
+
+            toggleBtn.addEventListener('click', () => {
+                menuOpen = !menuOpen;
+                if (menuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                }
+                toggleBtn.innerHTML = menuOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+        })();
+    </script>
+</body>
+</html>

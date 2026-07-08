@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Use | PVCMX</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* Base styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F9FAFB;
+            color: #0F172A;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        h1 { font-weight: 900; }
+        h2 { font-weight: 800; }
+        h3, h4 { font-weight: 700; }
+
+        :root {
+            --green-dark: #006341;
+            --green-mid: #2E7D32;
+            --red: #CE1126;
+        }
+        
+        /* Navbar styles */
+        .nav-link { font-family: 'Poppins', sans-serif; font-weight: 500; }
+        .btn-mexican {
+            background: linear-gradient(135deg, var(--green-dark), var(--red));
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 99, 65, 0.35);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        .btn-mexican:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(206, 17, 38, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ════════════ HEADER ════════════ -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-green-950/90 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 md:h-24">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <a href="index-v4.html" class="inline-block transition-transform hover:scale-105">
+                        <img src="assets/Logo.png" alt="PVCMX Logo" class="h-14 sm:h-16 md:h-20 w-auto object-contain">
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index-v4.html#features" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Features</a>
+                    <a href="index-v4.html#author" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Author</a>
+                    <a href="index-v4.html#contact" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Contact</a>
+                    <a href="index-v4.html#donate" class="btn-mexican text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105">
+                        <i class="fas fa-mug-hot mr-2"></i>Buy Me a Coffee
+                    </a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-green-950/95 backdrop-blur-xl rounded-2xl mt-2 px-6 py-4 border border-white/10">
+                <div class="flex flex-col gap-3 text-sm">
+                    <a href="index-v4.html#features" class="text-white/80 hover:text-white transition font-medium nav-link">Features</a>
+                    <a href="index-v4.html#author" class="text-white/80 hover:text-white transition font-medium nav-link">Author</a>
+                    <a href="index-v4.html#contact" class="text-white/80 hover:text-white transition font-medium nav-link">Contact</a>
+                    <a href="index-v4.html#donate" class="btn-mexican text-center text-white font-bold px-4 py-2.5 rounded-full mt-1"><i class="fas fa-mug-hot mr-2"></i>Buy Me a Coffee</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ════════════ CONTENT ════════════ -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-3xl shadow-xl p-8 sm:p-12 border border-slate-200">
+            <h1 class="text-4xl font-extrabold text-slate-900 mb-2">Terms of Use</h1>
+            <p class="text-slate-500 font-medium mb-8">Last updated: July 2026</p>
+            
+            <div class="text-slate-700 leading-relaxed space-y-6" style="font-family: 'Inter', sans-serif;">
+                <p>Welcome to PVCMX.</p>
+                
+                <p>These Terms of Use govern your access to and use of the website located at <a href="https://www.pvcmx.com" class="text-[#006341] font-medium hover:underline" target="_blank">www.pvcmx.com</a>, including its pages, articles, videos, downloadable materials, forms, consultations, digital products, referral services, and other content or features made available through the website.</p>
+                <p>By accessing or using this website, submitting a contact form, downloading materials, purchasing a product or service, or communicating with PVCMX through the website, you acknowledge that you have read and agree to these Terms of Use.</p>
+                <p class="font-bold">When you do not agree with these terms, please do not use the website or purchase products or services through it.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">1. About PVCMX</h2>
+                <p>PVCMX provides general information, orientation, educational materials, consultations, and coordination assistance for individuals considering relocation, retirement, property matters, residency, transportation, healthcare, business activities, or everyday life in Puerto Vallarta and the surrounding region of Mexico.</p>
+                <p>PVCMX may also introduce clients to independent professionals and service providers, including lawyers, immigration specialists, accountants, real-estate professionals, insurance representatives, healthcare advisers, vehicle specialists, translators, notaries, and other consultants.</p>
+                <p>PVCMX does not represent that every service described on the website is available in every location or under every circumstance.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">2. Informational Purpose</h2>
+                <p>The information presented on the PVCMX website and in the PVCMX Handbook is provided for general informational and educational purposes.</p>
+                <p>Although PVCMX makes reasonable efforts to provide useful and accurate information, laws, government procedures, fees, eligibility requirements, market conditions, institutional policies, and administrative practices may change without notice.</p>
+                <p>Website content should not be treated as a substitute for advice based on your individual circumstances.</p>
+                <p>You are responsible for verifying current requirements with the appropriate authority or qualified professional before taking action.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">3. No Legal Advice</h2>
+                <p>PVCMX is not a law firm, and general information provided through the website, handbook, videos, messages, consultations, or other materials does not constitute legal advice or create an attorney-client relationship.</p>
+                <p>An attorney-client relationship arises only when you separately engage a qualified attorney under the terms established by that attorney.</p>
+                <p>Questions involving immigration status, residency eligibility, contracts, property ownership, trusts, corporate formation, disputes, taxes, regulatory compliance, or other legal matters should be reviewed by a qualified Mexican attorney or other appropriately licensed professional.</p>
+                <p>Communicating with PVCMX or with the legal contact identified on this website does not automatically create an attorney-client relationship.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">4. No Tax, Accounting, Financial, Medical, or Insurance Advice</h2>
+                <p>Information provided by PVCMX does not constitute tax, accounting, investment, financial, medical, healthcare, or insurance advice.</p>
+                <p>You should consult an appropriately licensed or qualified professional before making decisions involving:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Tax residency or tax obligations</li>
+                    <li>Business structures or accounting</li>
+                    <li>Investments or financial products</li>
+                    <li>Insurance coverage</li>
+                    <li>Medical treatment or healthcare</li>
+                    <li>Immigration or legal status</li>
+                    <li>Property purchases or leases</li>
+                    <li>Vehicle importation or registration</li>
+                </ul>
+                <p>PVCMX does not guarantee that a particular strategy, service, insurance plan, healthcare option, investment, property, or business opportunity will be suitable for you.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">5. Consultations and Personalized Assistance</h2>
+                <p>A consultation with PVCMX may provide general orientation, practical guidance, organizational assistance, and introductions to relevant service providers.</p>
+                <p>Unless expressly agreed in writing, a consultation does not include:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Formal legal representation</li>
+                    <li>Preparation or filing of legal documents</li>
+                    <li>Tax or accounting representation</li>
+                    <li>Medical diagnosis or treatment</li>
+                    <li>Real-estate brokerage services</li>
+                    <li>Government approval or expedited processing</li>
+                    <li>A guarantee of residency, licensing, registration, financing, property acquisition, or business authorization</li>
+                </ul>
+                <p>The scope, price, duration, and deliverables of any paid consultation or service will be described separately before purchase or engagement.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">6. Independent Professionals and Service Providers</h2>
+                <p>PVCMX may introduce you to independent professionals or businesses that appear relevant to your needs.</p>
+                <p>These professionals and service providers are independent from PVCMX unless expressly stated otherwise in writing. They are responsible for their own:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Professional advice</li>
+                    <li>Licenses and qualifications</li>
+                    <li>Contracts and fees</li>
+                    <li>Services and performance</li>
+                    <li>Privacy practices</li>
+                    <li>Representations and warranties</li>
+                    <li>Errors or omissions</li>
+                    <li>Legal and regulatory compliance</li>
+                </ul>
+                <p>An introduction or referral does not constitute a guarantee, endorsement, partnership, employment relationship, or representation that a particular provider will be appropriate for every client.</p>
+                <p>Before hiring an independent provider, you should review that provider's qualifications, terms, fees, licenses, insurance, and professional responsibilities.</p>
+                <p>Any agreement you enter into with an independent provider is between you and that provider.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">7. No Guarantee of Results</h2>
+                <p>PVCMX cannot guarantee the result of any application, transaction, consultation, referral, property search, business process, government procedure, healthcare matter, vehicle process, or professional engagement.</p>
+                <p>Outcomes may depend on circumstances outside PVCMX's control, including:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Government decisions</li>
+                    <li>Changes in laws or procedures</li>
+                    <li>Processing delays</li>
+                    <li>Availability of appointments</li>
+                    <li>Documentation provided by the client</li>
+                    <li>Decisions of banks, insurers, hospitals, landlords, sellers, developers, or other organizations</li>
+                    <li>Actions or omissions of independent professionals</li>
+                    <li>Market conditions</li>
+                    <li>The client's eligibility and personal circumstances</li>
+                </ul>
+                <p>Any examples, estimates, timelines, testimonials, or descriptions of past experiences are illustrative only and do not promise a similar result.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">8. User Responsibilities</h2>
+                <p>When using the PVCMX website or services, you agree to:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Provide accurate and current information</li>
+                    <li>Avoid impersonating another person</li>
+                    <li>Avoid submitting false, misleading, fraudulent, or unlawful requests</li>
+                    <li>Review documents and information before relying upon them</li>
+                    <li>Provide requested documentation in a timely manner</li>
+                    <li>Protect the confidentiality of any account credentials or download links</li>
+                    <li>Use the website and its materials only for lawful purposes</li>
+                    <li>Respect the intellectual-property rights of PVCMX and others</li>
+                    <li>Obtain independent professional advice when appropriate</li>
+                </ul>
+                <p>You remain responsible for your decisions and for confirming that any action you take complies with applicable laws and regulations.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">9. Prohibited Uses</h2>
+                <p>You may not use the website or its content to:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Violate any applicable law or regulation</li>
+                    <li>Commit fraud or misrepresentation</li>
+                    <li>Interfere with the security or operation of the website</li>
+                    <li>Introduce viruses, malicious code, automated attacks, or harmful software</li>
+                    <li>Attempt to gain unauthorized access to website systems or data</li>
+                    <li>Collect information about other users without authorization</li>
+                    <li>Scrape, copy, reproduce, or republish substantial portions of the website without permission</li>
+                    <li>Resell or commercially distribute PVCMX materials without written authorization</li>
+                    <li>Misrepresent PVCMX content as your own</li>
+                    <li>Use PVCMX materials to create a competing publication, course, website, or commercial service</li>
+                    <li>Remove copyright, trademark, attribution, or ownership notices</li>
+                </ul>
+                <p>PVCMX may restrict or terminate access when it reasonably believes the website is being misused.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">10. Intellectual Property</h2>
+                <p>Unless otherwise indicated, the PVCMX website and its original content—including text, handbook materials, branding, logos, graphics, page designs, photographs, videos, audio, checklists, guides, downloadable documents, and educational materials—are owned by PVCMX, its founder, its licensors, or the identified content owner.</p>
+                <p>All rights are reserved.</p>
+                <p>You may access the website and use purchased or freely provided materials for your own personal, noncommercial use.</p>
+                <p>You may not, without prior written authorization:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Reproduce or republish substantial portions of the website</li>
+                    <li>Copy or distribute the PVCMX Handbook</li>
+                    <li>Upload PVCMX materials to another website or file-sharing service</li>
+                    <li>Sell, license, rent, or commercially exploit PVCMX content</li>
+                    <li>Modify PVCMX materials and present them as official PVCMX materials</li>
+                    <li>Create derivative commercial products based substantially on PVCMX content</li>
+                    <li>Use PVCMX trademarks, logos, or branding in a way that suggests affiliation or endorsement</li>
+                </ul>
+                <p>Brief quotations may be used when legally permitted and accompanied by appropriate attribution.</p>
+                <p>Requests for permission should be sent to:</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    Ulises Santiago<br>
+                    Email: <a href="mailto:legal@rola-mex.com.mx" class="text-[#006341] font-medium hover:underline">legal@rola-mex.com.mx</a><br>
+                    Telephone: +52 (322) 779-9610
+                </div>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">11. PVCMX Handbook and Digital Materials</h2>
+                <p>When you purchase or download the PVCMX Handbook or another PVCMX digital product, you receive a limited, personal, nonexclusive, nontransferable right to use the material for your own informational purposes.</p>
+                <p>Your purchase does not transfer ownership of the material or its intellectual-property rights.</p>
+                <p>Unless PVCMX expressly authorizes it in writing, you may not:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Share the complete handbook publicly</li>
+                    <li>Forward copies to multiple unrelated people</li>
+                    <li>Resell or sublicense it</li>
+                    <li>Post it online</li>
+                    <li>Upload it to a shared database or document platform</li>
+                    <li>Use it as the basis for a competing commercial service or publication</li>
+                </ul>
+                <p>Reasonable personal use within the same household is permitted.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">12. Purchases and Payments</h2>
+                <p>Prices, currencies, taxes, payment methods, and the scope of purchased products or services will be displayed on the website, checkout page, proposal, invoice, or service confirmation.</p>
+                <p>You agree to provide complete and accurate billing information.</p>
+                <p>Payments may be processed by an independent payment-service provider. The provider's own terms and privacy practices may also apply.</p>
+                <p>PVCMX does not ordinarily receive or store complete payment-card information when a transaction is processed directly by an independent payment provider.</p>
+                <p>PVCMX may correct obvious pricing, typographical, or technical errors. When an error affects a completed purchase, PVCMX will contact the purchaser and provide an appropriate resolution consistent with applicable consumer law.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">13. Digital Delivery</h2>
+                <p>Digital products may be delivered by:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Direct website download</li>
+                    <li>Email</li>
+                    <li>A private download link</li>
+                    <li>Access through a third-party platform</li>
+                    <li>Another electronic method disclosed at checkout</li>
+                </ul>
+                <p>You are responsible for providing a correct email address and for maintaining the equipment, software, and internet access needed to receive and open the material.</p>
+                <p>You should contact PVCMX promptly when a purchased digital product is not delivered or cannot be accessed.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">14. Cancellations, Refunds, and Rescheduling</h2>
+                <p>The cancellation, refund, and rescheduling conditions applicable to a particular consultation, digital product, package, or service will be presented at the time of purchase or in the corresponding proposal or confirmation.</p>
+                <p>Unless otherwise stated:</p>
+                <p class="font-bold">Digital products</p>
+                <p>Due to the nature of immediately accessible digital materials, purchases may become nonrefundable after the product has been downloaded, accessed, or delivered, except when:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>The product is defective or inaccessible</li>
+                    <li>The purchaser was charged incorrectly</li>
+                    <li>A refund is required under applicable law</li>
+                    <li>PVCMX expressly agrees otherwise</li>
+                </ul>
+                <p class="font-bold">Consultations</p>
+                <p>Consultations may be rescheduled when reasonable notice is provided.</p>
+                <p>PVCMX may establish a cancellation or rescheduling period in the appointment confirmation. Missed appointments or late cancellations may be nonrefundable when this was clearly disclosed before payment.</p>
+                <p>Nothing in this section limits any nonwaivable right provided by applicable consumer law.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">15. Website Accuracy and Availability</h2>
+                <p>PVCMX strives to maintain accurate and useful website content but does not guarantee that all content will always be:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Complete</li>
+                    <li>Current</li>
+                    <li>Error-free</li>
+                    <li>Available without interruption</li>
+                    <li>Suitable for every user</li>
+                    <li>Compatible with every device or browser</li>
+                </ul>
+                <p>The website may be temporarily unavailable because of maintenance, updates, technical failures, cybersecurity events, hosting problems, or circumstances beyond PVCMX's control.</p>
+                <p>PVCMX may update, remove, reorganize, or discontinue website content or features without prior notice.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">16. Third-Party Websites and Platforms</h2>
+                <p>The PVCMX website may contain links to websites, applications, maps, videos, social-media platforms, scheduling systems, payment services, government resources, or businesses operated by third parties.</p>
+                <p>These links are provided for convenience and information.</p>
+                <p>PVCMX does not control and is not responsible for the:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Accuracy of third-party content</li>
+                    <li>Availability of external websites</li>
+                    <li>Products or services offered by third parties</li>
+                    <li>Privacy or security practices of third parties</li>
+                    <li>Terms imposed by external platforms</li>
+                    <li>Actions or omissions of third-party operators</li>
+                </ul>
+                <p>Your use of an external website is governed by that website's own terms and policies.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">17. Testimonials and Personal Experiences</h2>
+                <p>Testimonials, reviews, personal accounts, and descriptions of client or founder experiences reflect individual circumstances.</p>
+                <p>They do not guarantee that every person will receive the same result or have the same experience.</p>
+                <p>PVCMX may edit testimonials for length, grammar, clarity, or privacy, but will not knowingly alter their substantive meaning.</p>
+                <p>Testimonials will be published only with appropriate permission.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">18. Limitation of Liability</h2>
+                <p>To the fullest extent permitted by applicable law, PVCMX and its founder, personnel, contractors, and representatives will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages arising from:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Use of or inability to use the website</li>
+                    <li>Reliance on general website or handbook information</li>
+                    <li>Decisions made by government authorities</li>
+                    <li>Services provided by independent professionals</li>
+                    <li>External websites or third-party platforms</li>
+                    <li>Loss of data, income, opportunity, business, or anticipated savings</li>
+                    <li>Website interruptions, errors, or security incidents outside reasonable control</li>
+                </ul>
+                <p>Where PVCMX is legally responsible for a direct loss, its liability will be limited to the amount paid directly to PVCMX for the specific product or service giving rise to the claim, except where such a limitation is prohibited by applicable law.</p>
+                <p>Nothing in these Terms of Use excludes or limits liability that cannot legally be excluded, including mandatory consumer rights.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">19. Indemnification</h2>
+                <p>To the extent permitted by law, you agree to be responsible for losses, claims, or expenses resulting from:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Your unlawful use of the website</li>
+                    <li>Your violation of these Terms of Use</li>
+                    <li>Your infringement of another person's rights</li>
+                    <li>False or misleading information submitted by you</li>
+                    <li>Unauthorized distribution or commercial use of PVCMX materials</li>
+                </ul>
+                <p>This provision does not apply where the loss resulted from the negligence, unlawful conduct, or breach of PVCMX.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">20. Privacy</h2>
+                <p>Use of personal information submitted through the website is governed by the PVCMX Privacy Policy.</p>
+                <p>By using the website, you acknowledge that electronic communications and internet transmissions may involve security risks.</p>
+                <p>Do not submit passports, identification documents, financial records, medical information, or other sensitive materials through ordinary website forms unless PVCMX has specifically requested them through an appropriate method.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">21. Electronic Communications</h2>
+                <p>By contacting PVCMX electronically, you consent to receiving communications related to your inquiry, consultation, purchase, appointment, or requested service.</p>
+                <p>Electronic communications may include:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Email</li>
+                    <li>Telephone calls</li>
+                    <li>WhatsApp messages</li>
+                    <li>Appointment confirmations</li>
+                    <li>Digital receipts</li>
+                    <li>Service updates</li>
+                    <li>Download instructions</li>
+                    <li>Legal or administrative notices</li>
+                </ul>
+                <p>Promotional communications will be subject to the consent and opt-out choices described in the PVCMX Privacy Policy.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">22. Changes to These Terms</h2>
+                <p>PVCMX may revise these Terms of Use to reflect changes in:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Website functions</li>
+                    <li>Products or services</li>
+                    <li>Business practices</li>
+                    <li>Technology</li>
+                    <li>Legal or regulatory requirements</li>
+                </ul>
+                <p>The revised version will be posted on the website with an updated revision date.</p>
+                <p>Changes will apply prospectively from the date of publication unless applicable law requires otherwise.</p>
+                <p>Material changes affecting an existing paid service will not retroactively reduce rights already granted to a customer without appropriate notice or consent.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">23. Suspension or Termination</h2>
+                <p>PVCMX may suspend or terminate a user's access to restricted website features, consultations, downloads, or services when the user:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Violates these Terms of Use</li>
+                    <li>Engages in fraudulent or abusive conduct</li>
+                    <li>Misuses PVCMX materials</li>
+                    <li>Threatens website security</li>
+                    <li>Fails to make an agreed payment</li>
+                    <li>Uses PVCMX services for unlawful purposes</li>
+                </ul>
+                <p>Termination does not affect obligations or rights that arose before termination.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">24. Governing Law and Dispute Resolution</h2>
+                <p>These Terms of Use are governed by the applicable laws of the United Mexican States.</p>
+                <p>The parties should first attempt in good faith to resolve any concern through direct communication.</p>
+                <p>Nothing in these terms prevents a consumer from exercising rights or using procedures available through the Procuraduría Federal del Consumidor, commonly known as PROFECO, or another competent authority.</p>
+                <p>When a dispute cannot be resolved informally, it will be submitted to the competent authorities or courts in accordance with applicable law and mandatory consumer-protection rules.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">25. Severability</h2>
+                <p>When any provision of these Terms of Use is found to be invalid, unlawful, or unenforceable, the remaining provisions will continue in effect to the extent legally permitted.</p>
+                <p>The invalid provision will be interpreted or limited as closely as possible to its original lawful purpose.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">26. No Waiver</h2>
+                <p>A delay or failure by PVCMX to enforce a provision of these Terms of Use does not constitute a permanent waiver of that provision or any other right.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">27. Entire Agreement</h2>
+                <p>These Terms of Use, together with the PVCMX Privacy Policy and any specific written proposal, purchase condition, appointment confirmation, refund policy, or service agreement applicable to a transaction, constitute the agreement governing your use of the website and the corresponding product or service.</p>
+                <p>When a separate written agreement conflicts with these general Terms of Use, the separate agreement will govern the specific service covered by it, subject to applicable law.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-slate-100 pb-2">28. Contact and Legal Notices</h2>
+                <p>Questions regarding these Terms of Use, intellectual property, legal notices, complaints, or formal requests may be directed to:</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <strong>PVCMX</strong><br>
+                    Legal Contact: Lic. Ulises M Santiago Ochoa<br>
+                    Email: <a href="mailto:legal@rola-mex.com.mx" class="text-[#006341] font-medium hover:underline">legal@rola-mex.com.mx</a><br>
+                    Telephone: +52 (322) 779-9610<br>
+                    Website: <a href="https://www.pvcmx.com" class="text-[#006341] font-medium hover:underline" target="_blank">www.pvcmx.com</a><br>
+                    Puerto Vallarta and Bahía de Banderas region, Mexico
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ════════════ FOOTER ════════════ -->
+    <footer class="py-10 border-t border-white/10 bg-[#004d2e]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-white/70 font-medium" style="font-family: 'Inter', sans-serif;">
+                <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+                <a href="terms-of-use.html" class="text-white font-bold transition">Terms of Use</a>
+                <span>© 2026 PVCMX · All rights reserved</span>
+            </div>
+            <p class="mt-3 text-xs text-white/40 font-medium" style="font-family: 'Inter', sans-serif;">Puerto Vallarta Consultants of Mexico · Your trusted partner for relocation, retirement, and business in Mexico.</p>
+            <div class="mt-4 flex justify-center gap-4 text-white/40 text-sm">
+                <a href="https://www.facebook.com/PVCMX/" target="_blank" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ════════════ JAVASCRIPT ════════════ -->
+    <script>
+        (function() {
+            "use strict";
+            // ── Mobile menu toggle ──
+            const toggleBtn = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            let menuOpen = false;
+
+            toggleBtn.addEventListener('click', () => {
+                menuOpen = !menuOpen;
+                if (menuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                }
+                toggleBtn.innerHTML = menuOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+        })();
+    </script>
+</body>
+</html>

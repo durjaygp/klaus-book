@@ -152,15 +152,7 @@
             box-shadow: 0 0 0 4px rgba(0, 99, 65, 0.12);
         }
 
-        /* ── mobile menu ── */
-        #mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-        }
-        #mobile-menu.open {
-            max-height: 400px;
-        }
+
 
         /* ── scroll to top ── */
         #scrollTop {
@@ -243,17 +235,17 @@
                 <!-- Logo -->
                 <div class="flex items-center gap-2">
                     <a href="#" class="inline-block transition-transform hover:scale-105">
-                        <img src="assets/Logo.png" alt="PVCMX Logo" class="h-14 sm:h-16 md:h-20 w-auto object-contain">
+                        <img src="Logo.png" alt="PVCMX Logo" class="h-14 sm:h-16 md:h-20 w-auto object-contain">
                     </a>
                 </div>
 
                 <!-- Desktop Nav -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="#features" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Features</a>
-                    <a href="#author" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Author</a>
-                    <a href="#contact" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Contact</a>
-                    <a href="#donate" class="btn-mexican text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105">
-                        <i class="fas fa-mug-hot mr-2"></i>Buy Me a Coffee
+                    <a href="#video" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Why This Handbook</a>
+                    <a href="#author" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">About Klaus</a>
+                    <a href="#contact" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Contact Us</a>
+                    <a href="#header" class="btn-mexican text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105">
+                        <i class="fas fa-calendar-check mr-2"></i>Book Consultation
                     </a>
                 </div>
 
@@ -263,13 +255,22 @@
                 </button>
             </div>
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden bg-green-950/95 backdrop-blur-xl rounded-2xl mt-2 px-6 py-4 border border-white/10">
-                <div class="flex flex-col gap-3 text-sm">
-                    <a href="#features" class="text-white/80 hover:text-white transition font-medium nav-link">Features</a>
-                    <a href="#author" class="text-white/80 hover:text-white transition font-medium nav-link">Author</a>
-                    <a href="#contact" class="text-white/80 hover:text-white transition font-medium nav-link">Contact</a>
-                    <a href="#donate" class="btn-mexican text-center text-white font-bold px-4 py-2.5 rounded-full mt-1"><i class="fas fa-mug-hot mr-2"></i>Buy Me a Coffee</a>
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-overlay" class="md:hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[55] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+            
+            <!-- Mobile Menu Drawer -->
+            <div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-screen w-72 bg-[#004d2e] shadow-2xl z-[60] flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out">
+                <div class="flex items-center justify-between p-6 border-b border-white/10">
+                    <span class="text-white font-bold text-lg tracking-wide" style="font-family: 'Poppins', sans-serif;">Menu</span>
+                    <button id="close-menu-btn" class="text-white/80 hover:text-white text-2xl focus:outline-none transition-colors">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-6 text-base p-6 mt-2">
+                    <a href="#video" class="text-white/90 hover:text-white transition font-medium nav-link">Why This Handbook</a>
+                    <a href="#author" class="text-white/90 hover:text-white transition font-medium nav-link">About Klaus</a>
+                    <a href="#contact" class="text-white/90 hover:text-white transition font-medium nav-link">Contact Us</a>
+                    <a href="#header" class="btn-mexican text-center text-white font-bold px-5 py-3.5 rounded-xl mt-4 shadow-lg"><i class="fas fa-calendar-check mr-2"></i>Book Consultation</a>
                 </div>
             </div>
         </div>
@@ -335,19 +336,8 @@
                                 <input type="tel" placeholder="+1 (555) 000-0000" class="input-phone w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#006341] focus:border-[#006341] outline-none transition-all text-slate-900">
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold text-slate-700 mb-2" style="font-family: 'Inter', sans-serif;">What would you like to do?</label>
-                                <div class="grid grid-cols-2 gap-y-2 gap-x-2 text-xs text-slate-700" style="font-family: 'Inter', sans-serif;">
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-3.5 h-3.5 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Relocate to Mexico</label>
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-3.5 h-3.5 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Retire in Mexico</label>
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-3.5 h-3.5 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Buying or Renting</label>
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-3.5 h-3.5 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Healthcare</label>
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-3.5 h-3.5 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Insurance</label>
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-3.5 h-3.5 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Do Business in Mexico</label>
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-3.5 h-3.5 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Open a Bank Account</label>
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-3.5 h-3.5 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Residency</label>
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-3.5 h-3.5 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Visa Application</label>
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-3.5 h-3.5 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Other</label>
-                                </div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1" style="font-family: 'Inter', sans-serif;">What Timezone are you in?</label>
+                                <input type="text" placeholder="e.g. EST, Pacific Time, or City/State" required class="input-timezone w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#006341] focus:border-[#006341] outline-none transition-all text-slate-900">
                             </div>
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 mb-2" style="font-family: 'Inter', sans-serif;">Preferred consultation schedule</label>
@@ -376,6 +366,9 @@
                             <button type="submit" class="w-full btn-mexican text-white font-bold py-3.5 px-6 rounded-xl text-base shadow-lg transition-all flex items-center justify-center gap-2 mt-2">
                                 <i class="fas fa-calendar-check"></i> Book Consultation
                             </button>
+                            <p class="text-[11px] text-slate-500 mt-3 text-center leading-tight" style="font-family: 'Inter', sans-serif;">
+                                By submitting this form, you confirm that you have read the PVCMX <a href="privacy-policy.html" class="text-[#006341] font-medium hover:underline">Privacy Policy</a> and agree to the website <a href="terms-of-use.html" class="text-[#006341] font-medium hover:underline">Terms of Use</a>.
+                            </p>
                             <p class="form-feedback text-center text-sm mt-2 h-5 font-medium text-[#006341]" style="font-family: 'Inter', sans-serif;"></p>
                         </form>
                     </div>
@@ -674,18 +667,19 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="order-2 md:order-1 fade-up">
-                    <span class="text-[#CE1126] text-sm font-bold uppercase tracking-wider section-label"><i class="fas fa-feather-alt mr-2"></i>About the Author</span>
+                    <span class="text-[#CE1126] text-sm font-bold uppercase tracking-wider section-label"><i class="fas fa-user-tie mr-2"></i>About the Founder</span>
                     <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Klaus Sichelschmidt</h2>
                     <p class="mt-5 text-white/85 leading-relaxed text-base" style="font-family: 'Inter', sans-serif;">
-                        Klaus has lived and conducted business across the United States, Germany, Italy, China, Chile, and Mexico. He first visited Puerto Vallarta in 1999 and made it his home after decades of international experience.
+                        Klaus has lived and worked in Germany, Italy, Chile, the United States, and Mexico, building more than four decades of international business and personal experience. His work has also taken him to China and other parts of the world, giving him a broad understanding of different cultures, systems, and ways of life.
                     </p>
                     <p class="mt-4 text-white/85 leading-relaxed text-base" style="font-family: 'Inter', sans-serif;">
-                        This guide distills his personal journey — the challenges, the mistakes, and the wins — into a practical roadmap for anyone considering life, retirement, or business in Mexico.
+                        He first visited Puerto Vallarta in 1999 and later chose the region as his home. Through his own experience of living, working, relocating, and building businesses internationally, Klaus understands the practical questions and uncertainties that come with starting a new chapter in another country.
                     </p>
-                    <div class="mt-8 flex flex-wrap gap-4">
-                        <span class="bg-green-800/50 px-4 py-2 rounded-full text-sm border border-white/20 text-white font-medium" style="font-family: 'Inter', sans-serif;"><i class="fas fa-check-circle text-[#CE1126] mr-1.5"></i> 2026 Edition</span>
-                        <span class="bg-green-800/50 px-4 py-2 rounded-full text-sm border border-white/20 text-white font-medium" style="font-family: 'Inter', sans-serif;"><i class="fas fa-file-pdf text-[#CE1126] mr-1.5"></i> Instant Access</span>
-                    </div>
+                    <p class="mt-4 text-white/85 leading-relaxed text-base" style="font-family: 'Inter', sans-serif;">
+                        This handbook was created to share that experience in a clear and honest way—helping readers better understand life, retirement, relocation, and business opportunities in Puerto Vallarta and the surrounding region.
+                    </p>
+                   
+                    
                 </div>
                 <div class="order-1 md:order-2 flex justify-center fade-up" style="transition-delay:0.15s;">
                     <div class="bg-green-900/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 w-full max-w-sm hover-lift text-center">
@@ -701,7 +695,7 @@
                         <p class="text-sm text-[#CE1126] font-medium" style="font-family: 'Inter', sans-serif;">Founder, PVCMX</p>
                         <div class="mt-6 text-sm text-white/80 border-t border-white/20 pt-6 italic leading-relaxed" style="font-family: 'Inter', sans-serif;">
                             <i class="fas fa-quote-left text-[#CE1126]/50 mr-2"></i>
-                            “Reality often differs from perception. This guide helps you see Mexico clearly.”
+                            “Moving to another country is more than changing your address. It is about understanding the culture, the systems, and the realities of everyday life. This handbook was created to help you begin that journey with greater clarity and confidence.”
                         </div>
                         <div class="mt-4 flex justify-center gap-4 text-xs text-white/60 font-medium" style="font-family: 'Inter', sans-serif;">
                             <span><i class="fas fa-map-pin text-[#CE1126]"></i> Puerto Vallarta</span>
@@ -714,7 +708,7 @@
     </section>
 
     <!-- ════════════ DOWNLOAD ════════════ -->
-    <section id="download" class="py-20 bg-[#F9FAFB] relative overflow-hidden">
+    <!-- <section id="download" class="py-20 bg-[#F9FAFB] relative overflow-hidden">
         <div class="absolute inset-0 bg-green-500/5 blur-3xl pointer-events-none"></div>
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center fade-up">
@@ -761,7 +755,7 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- ════════════ TESTIMONIALS ════════════ -->
     <section class="py-20 bg-white">
@@ -811,109 +805,48 @@
     <!-- ════════════ CONTACT ════════════ -->
     <section id="contact" class="py-20 bg-[#F9FAFB] relative overflow-hidden">
         <div class="absolute top-0 left-1/2 w-96 h-96 bg-green-500/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2"></div>
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
-                <div class="fade-up">
-                    <span class="text-[#006341] text-sm font-bold uppercase tracking-wider section-label"><i class="fas fa-paper-plane mr-2"></i>Get in Touch</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Still Have Questions?</h2>
-                    <p class="mt-4 text-slate-600 leading-relaxed text-base" style="font-family: 'Inter', sans-serif;">
-                        We're here to help. Reach out to PVCMX for personalized guidance on your relocation, retirement, or business journey in Mexico.
-                    </p>
-                    <div class="mt-8 space-y-4">
-                        <div class="flex items-center gap-4 text-slate-700">
-                            <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-[#006341] text-xl"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <p class="text-sm text-slate-500 font-medium" style="font-family: 'Inter', sans-serif;">Email</p>
-                                <a href="mailto:klaus@pvcmx.com" class="font-bold text-slate-800 hover:text-[#006341] transition" style="font-family: 'Inter', sans-serif;">klaus@pvcmx.com</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 text-slate-700">
-                            <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-[#006341] text-xl"><i class="fas fa-phone"></i></div>
-                            <div>
-                                <p class="text-sm text-slate-500 font-medium" style="font-family: 'Inter', sans-serif;">Phone</p>
-                                <a href="tel:+523222270206" class="font-bold text-slate-800 hover:text-[#006341] transition" style="font-family: 'Inter', sans-serif;">+52 (322) 227-0206</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 text-slate-700">
-                            <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-[#006341] text-xl"><i class="fas fa-location-dot"></i></div>
-                            <div>
-                                <p class="text-sm text-slate-500 font-medium" style="font-family: 'Inter', sans-serif;">Location</p>
-                                <span class="font-bold text-slate-800" style="font-family: 'Inter', sans-serif;">Puerto Vallarta, Jalisco, Mexico</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 text-slate-700">
-                            <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-[#006341] text-xl"><i class="fas fa-clock"></i></div>
-                            <div>
-                                <p class="text-sm text-slate-500 font-medium" style="font-family: 'Inter', sans-serif;">Time Zone</p>
-                                <span class="font-bold text-slate-800" style="font-family: 'Inter', sans-serif;">Central Time (CT)</span>
-                            </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="fade-up">
+                <span class="text-[#006341] text-sm font-bold uppercase tracking-wider section-label"><i class="fas fa-paper-plane mr-2"></i>Get in Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Still Have Questions?</h2>
+                <p class="mt-4 text-slate-600 leading-relaxed text-base max-w-2xl mx-auto" style="font-family: 'Inter', sans-serif;">
+                    We're here to help. Reach out to PVCMX for personalized guidance on your relocation, retirement, or business journey in Mexico.
+                </p>
+                
+                <div class="mt-10 inline-flex flex-col space-y-6 text-left bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-slate-100 min-w-[300px] sm:min-w-[420px]">
+                    <div class="flex items-center gap-5 text-slate-700">
+                        <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-[#006341] text-xl shrink-0"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <p class="text-sm text-slate-500 font-medium" style="font-family: 'Inter', sans-serif;">Email</p>
+                            <a href="mailto:klaus@pvcmx.com" class="font-bold text-slate-800 hover:text-[#006341] transition text-base" style="font-family: 'Inter', sans-serif;">klaus@pvcmx.com</a>
                         </div>
                     </div>
-                    <div class="mt-8 flex gap-3 flex-wrap">
-                        <span class="bg-green-50 px-4 py-2 rounded-full text-xs border border-green-200 text-slate-700 font-medium" style="font-family: 'Inter', sans-serif;"><i class="fas fa-shield-halved text-[#006341] mr-1.5"></i> Confidential</span>
-                        <span class="bg-green-50 px-4 py-2 rounded-full text-xs border border-green-200 text-slate-700 font-medium" style="font-family: 'Inter', sans-serif;"><i class="fas fa-clock text-[#006341] mr-1.5"></i> Response within 24h</span>
+                    <!-- <div class="flex items-center gap-5 text-slate-700">
+                        <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-[#006341] text-xl shrink-0"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <p class="text-sm text-slate-500 font-medium" style="font-family: 'Inter', sans-serif;">Phone</p>
+                            <a href="tel:+523222270206" class="font-bold text-slate-800 hover:text-[#006341] transition text-base" style="font-family: 'Inter', sans-serif;">+52 (322) 227-0206</a>
+                        </div>
+                    </div> -->
+                    <div class="flex items-center gap-5 text-slate-700">
+                        <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-[#006341] text-xl shrink-0"><i class="fas fa-location-dot"></i></div>
+                        <div>
+                            <p class="text-sm text-slate-500 font-medium" style="font-family: 'Inter', sans-serif;">Location</p>
+                            <span class="font-bold text-slate-800 text-base" style="font-family: 'Inter', sans-serif;">Puerto Vallarta, Jalisco, Mexico</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-5 text-slate-700">
+                        <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-[#006341] text-xl shrink-0"><i class="fab fa-facebook-f"></i></div>
+                        <div>
+                            <p class="text-sm text-slate-500 font-medium" style="font-family: 'Inter', sans-serif;">Facebook</p>
+                            <a href="https://www.facebook.com/PVCMX/" target="_blank" class="font-bold text-slate-800 hover:text-[#006341] transition text-base" style="font-family: 'Inter', sans-serif;">PVCMX</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xl shadow-green-500/5 fade-up" style="transition-delay:0.15s;">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Send a Message</h3>
-                    <form class="space-y-5 contact-form">
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Full Name</label>
-                            <input type="text" placeholder="e.g. John Doe" required class="input-name w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Email Address</label>
-                            <input type="email" placeholder="john@example.com" required class="input-email w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">Phone Number (Optional)</label>
-                            <input type="tel" placeholder="+1 (555) 000-0000" class="input-phone w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-2" style="font-family: 'Inter', sans-serif;">What would you like to do?</label>
-                            <div class="grid grid-cols-2 gap-y-2.5 gap-x-2 text-sm text-slate-700" style="font-family: 'Inter', sans-serif;">
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Relocate to Mexico</label>
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Retire in Mexico</label>
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Buying or Renting</label>
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Healthcare</label>
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Insurance</label>
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Do Business in Mexico</label>
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Open a Bank Account</label>
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Residency</label>
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Visa Application</label>
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]"> Other</label>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-2" style="font-family: 'Inter', sans-serif;">Preferred consultation schedule</label>
-                            <div class="flex flex-col gap-y-2.5 text-sm text-slate-700" style="font-family: 'Inter', sans-serif;">
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="time-checkbox w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]" value="Any Day of the Week"> Any Day of the Week</label>
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="time-checkbox w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]" value="Monday through Friday"> Monday through Friday</label>
-                                <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="checkbox" class="time-checkbox w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]" value="Weekend only"> Weekend only</label>
-                                <div class="flex items-center gap-2">
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition whitespace-nowrap"><input type="checkbox" class="time-checkbox w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]" value="Specific day"> A specific day</label>
-                                    <input type="text" placeholder="e.g. Tuesday" class="input-specific-day w-full input-mexican rounded-md px-2 py-1 text-sm focus:ring-0">
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="radio" name="ampm_bottom" class="time-checkbox w-4 h-4 text-[#006341] border-slate-300 focus:ring-[#006341]" value="AM"> AM</label>
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition"><input type="radio" name="ampm_bottom" class="time-checkbox w-4 h-4 text-[#006341] border-slate-300 focus:ring-[#006341]" value="PM"> PM</label>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <label class="flex items-center gap-2 cursor-pointer hover:text-[#006341] transition whitespace-nowrap"><input type="checkbox" class="time-checkbox w-4 h-4 text-[#006341] border-slate-300 rounded focus:ring-[#006341]" value="Specific time"> A specific time</label>
-                                    <input type="text" placeholder="e.g. 3:00 PM" class="input-specific-time w-full input-mexican rounded-md px-2 py-1 text-sm focus:ring-0">
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1.5" style="font-family: 'Inter', sans-serif;">What is the best day and time that suits your agenda?</label>
-                            <textarea rows="4" placeholder="Tell us about your plans or questions..." required class="input-message w-full input-mexican rounded-xl px-4 py-3 text-sm focus:ring-0 resize-none"></textarea>
-                        </div>
-                        <button type="submit" class="w-full btn-mexican text-white font-bold py-3.5 px-6 rounded-xl text-base shadow-lg transition-all flex items-center justify-center gap-2">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                        <p class="form-feedback text-center text-sm mt-2 h-5 font-medium text-[#006341]" style="font-family: 'Inter', sans-serif;"></p>
-                    </form>
+                <div class="mt-8 flex justify-center gap-3 flex-wrap">
+                    <span class="bg-green-50 px-4 py-2 rounded-full text-xs border border-green-200 text-slate-700 font-medium" style="font-family: 'Inter', sans-serif;"><i class="fas fa-shield-halved text-[#006341] mr-1.5"></i> Confidential</span>
+                    <span class="bg-green-50 px-4 py-2 rounded-full text-xs border border-green-200 text-slate-700 font-medium" style="font-family: 'Inter', sans-serif;"><i class="fas fa-clock text-[#006341] mr-1.5"></i> Response within 24h</span>
                 </div>
             </div>
         </div>
@@ -923,13 +856,13 @@
     <footer class="py-10 border-t border-white/10 bg-[#004d2e]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-wrap justify-center gap-6 text-sm text-white/70 font-medium" style="font-family: 'Inter', sans-serif;">
-                <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition">Terms of Use</a>
+                <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+                <a href="terms-of-use.html" class="hover:text-white transition">Terms of Use</a>
                 <span>© 2026 PVCMX · All rights reserved</span>
             </div>
             <p class="mt-3 text-xs text-white/40 font-medium" style="font-family: 'Inter', sans-serif;">Puerto Vallarta Consultants of Mexico · Your trusted partner for relocation, retirement, and business in Mexico.</p>
             <div class="mt-4 flex justify-center gap-4 text-white/40 text-sm">
-                <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/PVCMX/" target="_blank" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
@@ -980,20 +913,29 @@
             // ── Mobile menu toggle ──
             const toggleBtn = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
-            let menuOpen = false;
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            
+            function closeMenu() {
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                mobileOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+                mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+            }
 
-            toggleBtn.addEventListener('click', () => {
-                menuOpen = !menuOpen;
-                mobileMenu.classList.toggle('open', menuOpen);
-                toggleBtn.innerHTML = menuOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-            });
+            function openMenu() {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                mobileOverlay.classList.add('opacity-100', 'pointer-events-auto');
+            }
+
+            toggleBtn.addEventListener('click', openMenu);
+            closeMenuBtn.addEventListener('click', closeMenu);
+            mobileOverlay.addEventListener('click', closeMenu);
 
             document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('open');
-                    menuOpen = false;
-                    toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                });
+                link.addEventListener('click', closeMenu);
             });
 
             // ── Scroll to top ──
