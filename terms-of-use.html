@@ -56,21 +56,21 @@
     <!-- ════════════ HEADER ════════════ -->
     <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-green-950/90 backdrop-blur-xl border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20 md:h-24">
+            <div class="flex items-center justify-between py-3 md:py-4 transition-all duration-300">
                 <!-- Logo -->
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 shrink-0">
                     <a href="index-v4.html" class="inline-block transition-transform hover:scale-105">
-                        <img src="assets/Logo.png" alt="PVCMX Logo" class="h-14 sm:h-16 md:h-20 w-auto object-contain">
+                        <img src="Logo.png" alt="PVCMX Logo" class="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain">
                     </a>
                 </div>
 
                 <!-- Desktop Nav -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="index-v4.html#features" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Features</a>
-                    <a href="index-v4.html#author" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Author</a>
-                    <a href="index-v4.html#contact" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Contact</a>
-                    <a href="index-v4.html#donate" class="btn-mexican text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105">
-                        <i class="fas fa-mug-hot mr-2"></i>Buy Me a Coffee
+                    <a href="index-v4.html#video" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Watch Video</a>
+                    <a href="index-v4.html#author" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">About Klaus</a>
+                    <a href="index-v4.html#contact" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Contact Us</a>
+                    <a href="index-v4.html#header" class="btn-mexican text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105">
+                        <i class="fas fa-calendar-check mr-2"></i>Book Consultation
                     </a>
                 </div>
 
@@ -80,13 +80,22 @@
                 </button>
             </div>
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden bg-green-950/95 backdrop-blur-xl rounded-2xl mt-2 px-6 py-4 border border-white/10">
-                <div class="flex flex-col gap-3 text-sm">
-                    <a href="index-v4.html#features" class="text-white/80 hover:text-white transition font-medium nav-link">Features</a>
-                    <a href="index-v4.html#author" class="text-white/80 hover:text-white transition font-medium nav-link">Author</a>
-                    <a href="index-v4.html#contact" class="text-white/80 hover:text-white transition font-medium nav-link">Contact</a>
-                    <a href="index-v4.html#donate" class="btn-mexican text-center text-white font-bold px-4 py-2.5 rounded-full mt-1"><i class="fas fa-mug-hot mr-2"></i>Buy Me a Coffee</a>
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-overlay" class="md:hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[55] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+            
+            <!-- Mobile Menu Drawer -->
+            <div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-screen w-72 bg-[#004d2e] shadow-2xl z-[60] flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out">
+                <div class="flex items-center justify-between p-6 border-b border-white/10">
+                    <span class="text-white font-bold text-lg tracking-wide" style="font-family: 'Poppins', sans-serif;">Menu</span>
+                    <button id="close-menu-btn" class="text-white/80 hover:text-white text-2xl focus:outline-none transition-colors">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-6 text-base p-6 mt-2">
+                    <a href="index-v4.html#video" class="text-white/90 hover:text-white transition font-medium nav-link">Watch Video</a>
+                    <a href="index-v4.html#author" class="text-white/90 hover:text-white transition font-medium nav-link">About Klaus</a>
+                    <a href="index-v4.html#contact" class="text-white/90 hover:text-white transition font-medium nav-link">Contact Us</a>
+                    <a href="index-v4.html#header" class="btn-mexican text-center text-white font-bold px-5 py-3.5 rounded-xl mt-4 shadow-lg"><i class="fas fa-calendar-check mr-2"></i>Book Consultation</a>
                 </div>
             </div>
         </div>
@@ -430,7 +439,7 @@
                 <a href="terms-of-use.html" class="text-white font-bold transition">Terms of Use</a>
                 <span>© 2026 PVCMX · All rights reserved</span>
             </div>
-            <p class="mt-3 text-xs text-white/40 font-medium" style="font-family: 'Inter', sans-serif;">Puerto Vallarta Consultants of Mexico · Your trusted partner for relocation, retirement, and business in Mexico.</p>
+            <p class="mt-3 text-xs text-white/40 font-medium" style="font-family: 'Inter', sans-serif;">PVCMX Puerto Vallarta Consultants of Mexico · Your trusted partner for relocation, retirement, and doing business in Mexico.</p>
             <div class="mt-4 flex justify-center gap-4 text-white/40 text-sm">
                 <a href="https://www.facebook.com/PVCMX/" target="_blank" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
@@ -447,16 +456,29 @@
             // ── Mobile menu toggle ──
             const toggleBtn = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
-            let menuOpen = false;
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            
+            function closeMenu() {
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                mobileOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+                mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+            }
 
-            toggleBtn.addEventListener('click', () => {
-                menuOpen = !menuOpen;
-                if (menuOpen) {
-                    mobileMenu.classList.remove('hidden');
-                } else {
-                    mobileMenu.classList.add('hidden');
-                }
-                toggleBtn.innerHTML = menuOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            function openMenu() {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                mobileOverlay.classList.add('opacity-100', 'pointer-events-auto');
+            }
+
+            toggleBtn.addEventListener('click', openMenu);
+            closeMenuBtn.addEventListener('click', closeMenu);
+            mobileOverlay.addEventListener('click', closeMenu);
+
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', closeMenu);
             });
         })();
     </script>
