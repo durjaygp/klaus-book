@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Models\HomepageSetting;
 
 Route::get('/', function () {
-    $settings = HomepageSetting::first() ?? new HomepageSetting();
+    \App\Models\View::recordView('homepage');
+    $settings = App\Models\HomepageSetting::first() ?? new App\Models\HomepageSetting();
     return view('welcome', compact('settings'));
 })->name('home');
 
@@ -16,6 +17,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::view('contacts', 'contacts')->name('contacts');
     Route::view('reviews', 'reviews')->name('reviews');
+    Route::view('analytics', 'analytics')->name('analytics');
     Route::get('/homepage-settings', \App\Livewire\HomepageSettingsForm::class)->name('homepage-settings');
 });
 

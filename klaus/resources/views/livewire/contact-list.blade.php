@@ -106,6 +106,37 @@
                         <span class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Additional Information</span>
                         <div class="bg-slate-50 p-4 rounded-xl text-sm text-slate-800 border border-slate-100 whitespace-pre-wrap">{{ $viewingContact->additional_info ?: 'No additional info provided.' }}</div>
                     </div>
+                    
+                    <!-- Flash Messages -->
+                    @if (session()->has('message'))
+                        <div class="p-3 bg-green-50 text-green-700 text-sm rounded-lg flex items-center gap-2">
+                            <i class="fas fa-check-circle"></i> {{ session('message') }}
+                        </div>
+                    @endif
+                    @if (session()->has('error'))
+                        <div class="p-3 bg-red-50 text-red-700 text-sm rounded-lg flex items-center gap-2">
+                            <i class="fas fa-exclamation-triangle"></i> {{ session('error') }}
+                        </div>
+                    @endif
+
+                    <!-- Action Buttons -->
+                    <div class="pt-4 flex items-center gap-3 border-t border-slate-100">
+                        <button wire:click="sendConfirmationEmail" wire:loading.attr="disabled" class="flex-1 bg-[#006341] hover:bg-[#004d32] text-white py-2.5 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">
+                            <i class="fas fa-envelope" wire:loading.remove wire:target="sendConfirmationEmail"></i>
+                            <i class="fas fa-spinner fa-spin" wire:loading wire:target="sendConfirmationEmail"></i>
+                            Send Confirmation Email
+                        </button>
+                        
+                        @if($viewingContact->phone)
+                            <a href="tel:{{ $viewingContact->phone }}" class="flex-1 bg-slate-900 hover:bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-center">
+                                <i class="fas fa-phone-alt"></i> Call Customer
+                            </a>
+                        @else
+                            <button disabled class="flex-1 bg-slate-200 text-slate-500 py-2.5 px-4 rounded-lg font-medium cursor-not-allowed flex items-center justify-center gap-2">
+                                <i class="fas fa-phone-slash"></i> No Phone Provided
+                            </button>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,18 +5,32 @@
         $totalReviews = \App\Models\Review::count();
         $pendingReviews = \App\Models\Review::where('status', 'pending')->count();
         $approvedReviews = \App\Models\Review::where('status', 'approved')->count();
+        $totalViews = \App\Models\View::sum('views');
     @endphp
 
     <div class="flex h-full w-full flex-1 flex-col gap-6 rounded-xl">
         <flux:heading size="xl" class="mb-2">Overview</flux:heading>
 
-        <div class="grid auto-rows-min gap-6 md:grid-cols-4">
+        <div class="grid auto-rows-min gap-6 md:grid-cols-5">
+            
+            <!-- Views Stat -->
+            <a href="{{ route('analytics') }}" class="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer block">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-cyan-50 dark:bg-cyan-900/30 flex items-center justify-center text-cyan-600 dark:text-cyan-400 group-hover:bg-cyan-100 dark:group-hover:bg-cyan-900/50 transition-colors">
+                        <flux:icon.chart-bar class="size-6" />
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Views</p>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{{ $totalViews }}</h3>
+                    </div>
+                </div>
+            </a>
             
             <!-- Contacts Stat -->
-            <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm">
+            <a href="{{ route('contacts') }}" class="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer block">
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl">
-                        <i class="fas fa-address-book"></i>
+                    <div class="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors">
+                        <flux:icon.inbox class="size-6" />
                     </div>
                     <div>
                         <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Contacts</p>
@@ -28,46 +42,46 @@
                         {{ $unreadContacts }} unread
                     </div>
                 @endif
-            </div>
+            </a>
 
             <!-- Total Reviews Stat -->
-            <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm">
+            <a href="{{ route('reviews') }}" class="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer block">
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-xl">
-                        <i class="fas fa-star"></i>
+                    <div class="w-12 h-12 rounded-full bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 group-hover:bg-indigo-100 dark:group-hover:bg-indigo-900/50 transition-colors">
+                        <flux:icon.star class="size-6" />
                     </div>
                     <div>
                         <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Reviews</p>
                         <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{{ $totalReviews }}</h3>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <!-- Pending Reviews Stat -->
-            <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm">
+            <a href="{{ route('reviews') }}" class="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer block">
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-yellow-50 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-600 dark:text-yellow-400 text-xl">
-                        <i class="fas fa-clock"></i>
+                    <div class="w-12 h-12 rounded-full bg-yellow-50 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-600 dark:text-yellow-400 group-hover:bg-yellow-100 dark:group-hover:bg-yellow-900/50 transition-colors">
+                        <flux:icon.clock class="size-6" />
                     </div>
                     <div>
                         <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Pending Reviews</p>
                         <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{{ $pendingReviews }}</h3>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <!-- Approved Reviews Stat -->
-            <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm">
+            <a href="{{ route('reviews') }}" class="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all cursor-pointer block">
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-green-50 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400 text-xl">
-                        <i class="fas fa-check-circle"></i>
+                    <div class="w-12 h-12 rounded-full bg-green-50 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400 group-hover:bg-green-100 dark:group-hover:bg-green-900/50 transition-colors">
+                        <flux:icon.check-circle class="size-6" />
                     </div>
                     <div>
                         <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Approved Reviews</p>
                         <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{{ $approvedReviews }}</h3>
                     </div>
                 </div>
-            </div>
+            </a>
 
         </div>
 

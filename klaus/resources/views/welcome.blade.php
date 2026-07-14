@@ -1,6 +1,6 @@
 <x-layouts.marketing>
 <!-- ════════════ HERO ════════════ -->
-    <section class="hero-bg relative min-h-screen flex items-center overflow-hidden pt-20" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85)), url({{asset('images/header.jpeg')}}) center/cover no-repeat;">
+    <section class="hero-bg relative min-h-screen flex items-center overflow-hidden pt-20" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85)), url({{asset('bg.jpg')}}) center/cover no-repeat;">
         <!-- Glows -->
         <div class="hero-glow top-1/4 left-1/3 w-96 h-96 bg-red-500/20"></div>
         <div class="hero-glow bottom-1/3 right-1/4 w-72 h-72 bg-green-500/20"></div>

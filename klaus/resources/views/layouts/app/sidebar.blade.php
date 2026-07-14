@@ -33,6 +33,9 @@
                             @endif
                         </div>
                     </flux:sidebar.item>
+                    <flux:sidebar.item icon="chart-bar" :href="route('analytics')" :current="request()->routeIs('analytics')" wire:navigate>
+                        {{ __('Views & Analytics') }}
+                    </flux:sidebar.item>
                     <flux:sidebar.item icon="document-text" :href="route('homepage-settings')" :current="request()->routeIs('homepage-settings')" wire:navigate>
                         {{ __('Homepage Content') }}
                     </flux:sidebar.item>
