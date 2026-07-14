@@ -16,4 +16,18 @@ class HomepageSetting extends Model
             'menu' => 'array',
         ];
     }
+
+    public static function getCached()
+    {
+        return cache()->rememberForever('homepage_settings', function () {
+            return self::first() ?? new self();
+        });
+    }
+
+    protected static function booted()
+    {
+        static::saved(function () {
+            cache()->forget('homepage_settings');
+        });
+    }
 }

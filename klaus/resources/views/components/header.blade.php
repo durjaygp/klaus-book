@@ -19,7 +19,7 @@
             <!-- Desktop Nav -->
             <div class="hidden md:flex items-center gap-8">
                 @php
-                    $settings = \App\Models\HomepageSetting::first();
+                    $settings = \App\Models\HomepageSetting::getCached();
                 @endphp
                 @if(!empty($settings->menu))
                     @foreach($settings->menu as $menuItem)

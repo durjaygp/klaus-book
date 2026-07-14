@@ -1,4 +1,4 @@
-@php $settings = \App\Models\HomepageSetting::first() ?? new \App\Models\HomepageSetting(); @endphp
+@php $settings = \App\Models\HomepageSetting::getCached(); @endphp
 
 <footer class="py-10 border-t border-white/10 bg-[#004d2e]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

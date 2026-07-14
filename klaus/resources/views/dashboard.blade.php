@@ -1,11 +1,17 @@
 <x-layouts::app :title="__('Dashboard')">
     @php
-        $totalContacts = \App\Models\Contact::count();
-        $unreadContacts = \App\Models\Contact::where('is_read', false)->count();
-        $totalReviews = \App\Models\Review::count();
-        $pendingReviews = \App\Models\Review::where('status', 'pending')->count();
-        $approvedReviews = \App\Models\Review::where('status', 'approved')->count();
-        $totalViews = \App\Models\View::sum('views');
+        $stats = cache()->remember('dashboard_stats', 60, function () {
+            return [
+                'totalContacts' => \App\Models\Contact::count(),
+                'unreadContacts' => \App\Models\Contact::where('is_read', false)->count(),
+                'totalReviews' => \App\Models\Review::count(),
+                'pendingReviews' => \App\Models\Review::where('status', 'pending')->count(),
+                'approvedReviews' => \App\Models\Review::where('status', 'approved')->count(),
+                'totalViews' => \App\Models\View::sum('views')
+            ];
+        });
+        
+        extract($stats);
     @endphp
 
     <div class="flex h-full w-full flex-1 flex-col gap-6 rounded-xl">

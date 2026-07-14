@@ -6,7 +6,7 @@ use App\Models\HomepageSetting;
 
 Route::get('/', function () {
     \App\Models\View::recordView('homepage');
-    $settings = App\Models\HomepageSetting::first() ?? new App\Models\HomepageSetting();
+    $settings = App\Models\HomepageSetting::getCached();
     return view('welcome', compact('settings'));
 })->name('home');
 

@@ -145,7 +145,7 @@
                     <div class="bg-green-900/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 w-full max-w-sm hover-lift text-center">
                         <div class="relative inline-block">
                             <div class="w-32 h-32 rounded-full shadow-xl shadow-green-500/30 mx-auto overflow-hidden border-4 border-[#006341]">
-                                <img src="{{ $settings->about_profile_picture ? asset($settings->about_profile_picture) : asset('images/profile_picture.jpg') }}" alt="Klaus Sichelschmidt" class="w-full h-full object-cover">
+                                <img src="{{ $settings->about_profile_picture ? asset($settings->about_profile_picture) : asset('images/profile_picture.jpg') }}" alt="Klaus Sichelschmidt" class="w-full h-full object-cover" loading="lazy">
                             </div>
                             <div class="absolute bottom-0 right-0 bg-white rounded-full p-1.5 shadow-md">
                                 <i class="fas fa-check-circle text-[#006341] text-sm"></i>
@@ -168,6 +168,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- ════════════ REVIEW FORM ════════════ -->
     <section class="py-20 bg-slate-50 border-t border-slate-200 relative" id="reviewform">

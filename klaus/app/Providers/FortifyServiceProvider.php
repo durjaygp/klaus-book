@@ -18,7 +18,29 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->singleton(
+            \Laravel\Fortify\Contracts\LoginResponse::class,
+            function () {
+                return new class implements \Laravel\Fortify\Contracts\LoginResponse {
+                    public function toResponse($request)
+                    {
+                        return redirect()->intended('/dashboard');
+                    }
+                };
+            }
+        );
+
+        $this->app->singleton(
+            \Laravel\Fortify\Contracts\RegisterResponse::class,
+            function () {
+                return new class implements \Laravel\Fortify\Contracts\RegisterResponse {
+                    public function toResponse($request)
+                    {
+                        return redirect()->intended('/dashboard');
+                    }
+                };
+            }
+        );
     }
 
     /**

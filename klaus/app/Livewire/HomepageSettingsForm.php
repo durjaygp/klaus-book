@@ -55,7 +55,7 @@ class HomepageSettingsForm extends Component
 
     public function mount()
     {
-        $settings = HomepageSetting::first() ?? new HomepageSetting();
+        $settings = HomepageSetting::getCached();
         
         $this->website_title = $settings->website_title;
         $this->favicon = $settings->favicon;
