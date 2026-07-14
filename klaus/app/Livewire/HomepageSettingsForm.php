@@ -3,11 +3,23 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use App\Models\HomepageSetting;
 use Flux\Flux;
 
 class HomepageSettingsForm extends Component
 {
+    use WithFileUploads;
+
+    public $website_title;
+    public $favicon;
+    public $new_favicon;
+    public $hero_bg_image;
+    public $new_hero_bg_image;
+    public $about_profile_picture;
+    public $new_about_profile_picture;
+    public $menu = [];
+
     public $hero_badge_text;
     public $hero_title;
     public $hero_highlight;
@@ -45,6 +57,12 @@ class HomepageSettingsForm extends Component
     {
         $settings = HomepageSetting::first() ?? new HomepageSetting();
         
+        $this->website_title = $settings->website_title;
+        $this->favicon = $settings->favicon;
+        $this->hero_bg_image = $settings->hero_bg_image;
+        $this->about_profile_picture = $settings->about_profile_picture;
+        $this->menu = $settings->menu ?? [];
+
         $this->hero_badge_text = $settings->hero_badge_text;
         $this->hero_title = $settings->hero_title;
         $this->hero_highlight = $settings->hero_highlight;
@@ -79,6 +97,17 @@ class HomepageSettingsForm extends Component
         $this->footer_description = $settings->footer_description;
     }
 
+    public function addMenuItem()
+    {
+        $this->menu[] = ['label' => '', 'url' => ''];
+    }
+
+    public function removeMenuItem($index)
+    {
+        unset($this->menu[$index]);
+        $this->menu = array_values($this->menu);
+    }
+
     public function addBullet()
     {
         $this->hero_bullets[] = '';
@@ -105,6 +134,36 @@ class HomepageSettingsForm extends Component
     {
         $settings = HomepageSetting::first() ?? new HomepageSetting();
         
+        $settings->website_title = $this->website_title;
+        $settings->menu = array_values(array_filter($this->menu, function($item) {
+            return !empty($item['label']);
+        }));
+
+        // Handle image uploads
+        if ($this->new_favicon) {
+            $filename = 'favicon_' . time() . '.' . $this->new_favicon->getClientOriginalExtension();
+            \Illuminate\Support\Facades\File::copy($this->new_favicon->getRealPath(), public_path('uploads/' . $filename));
+            $settings->favicon = 'uploads/' . $filename;
+            $this->favicon = $settings->favicon;
+            $this->new_favicon = null;
+        }
+
+        if ($this->new_hero_bg_image) {
+            $filename = 'hero_' . time() . '.' . $this->new_hero_bg_image->getClientOriginalExtension();
+            \Illuminate\Support\Facades\File::copy($this->new_hero_bg_image->getRealPath(), public_path('uploads/' . $filename));
+            $settings->hero_bg_image = 'uploads/' . $filename;
+            $this->hero_bg_image = $settings->hero_bg_image;
+            $this->new_hero_bg_image = null;
+        }
+
+        if ($this->new_about_profile_picture) {
+            $filename = 'about_' . time() . '.' . $this->new_about_profile_picture->getClientOriginalExtension();
+            \Illuminate\Support\Facades\File::copy($this->new_about_profile_picture->getRealPath(), public_path('uploads/' . $filename));
+            $settings->about_profile_picture = 'uploads/' . $filename;
+            $this->about_profile_picture = $settings->about_profile_picture;
+            $this->new_about_profile_picture = null;
+        }
+
         $settings->hero_badge_text = $this->hero_badge_text;
         $settings->hero_title = $this->hero_title;
         $settings->hero_highlight = $this->hero_highlight;

@@ -1,6 +1,6 @@
-<x-layouts.marketing>
+<x-layouts.marketing :title="$settings->website_title ?? 'Klaus Book - Guide to Mexico'" :favicon="$settings->favicon ? asset($settings->favicon) : null">
 <!-- ════════════ HERO ════════════ -->
-    <section class="hero-bg relative min-h-screen flex items-center overflow-hidden pt-20" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85)), url({{asset('bg.jpg')}}) center/cover no-repeat;">
+    <section class="hero-bg relative min-h-screen flex items-center overflow-hidden pt-20" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85)), url('{{ $settings->hero_bg_image ? asset($settings->hero_bg_image) : asset('bg.jpg') }}') center/cover no-repeat;">
         <!-- Glows -->
         <div class="hero-glow top-1/4 left-1/3 w-96 h-96 bg-red-500/20"></div>
         <div class="hero-glow bottom-1/3 right-1/4 w-72 h-72 bg-green-500/20"></div>
@@ -145,7 +145,7 @@
                     <div class="bg-green-900/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 w-full max-w-sm hover-lift text-center">
                         <div class="relative inline-block">
                             <div class="w-32 h-32 rounded-full shadow-xl shadow-green-500/30 mx-auto overflow-hidden border-4 border-[#006341]">
-                                <img src="{{ asset('images/profile_picture.jpg') }}" alt="Klaus Sichelschmidt" class="w-full h-full object-cover">
+                                <img src="{{ $settings->about_profile_picture ? asset($settings->about_profile_picture) : asset('images/profile_picture.jpg') }}" alt="Klaus Sichelschmidt" class="w-full h-full object-cover">
                             </div>
                             <div class="absolute bottom-0 right-0 bg-white rounded-full p-1.5 shadow-md">
                                 <i class="fas fa-check-circle text-[#006341] text-sm"></i>
@@ -170,7 +170,7 @@
     </section>
 
     <!-- ════════════ REVIEW FORM ════════════ -->
-    <section class="py-20 bg-slate-50 border-t border-slate-200 relative">
+    <section class="py-20 bg-slate-50 border-t border-slate-200 relative" id="reviewform">
         <div class="absolute inset-0 bg-green-500/5 blur-3xl pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <livewire:review-form />

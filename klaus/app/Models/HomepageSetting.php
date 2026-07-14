@@ -13,6 +13,7 @@ class HomepageSetting extends Model
         return [
             'hero_bullets' => 'array',
             'about_points' => 'array',
+            'menu' => 'array',
         ];
     }
 }

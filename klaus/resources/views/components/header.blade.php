@@ -18,9 +18,18 @@
 
             <!-- Desktop Nav -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="{{ url('/') }}#video" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Watch Video</a>
-                <a href="{{ url('/') }}#author" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">About Klaus</a>
-                <a href="{{ url('/') }}#contact" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Contact Us</a>
+                @php
+                    $settings = \App\Models\HomepageSetting::first();
+                @endphp
+                @if(!empty($settings->menu))
+                    @foreach($settings->menu as $menuItem)
+                        <a href="{{ str_starts_with($menuItem['url'], '#') ? url('/') . $menuItem['url'] : $menuItem['url'] }}" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">{{ $menuItem['label'] }}</a>
+                    @endforeach
+                @else
+                    <a href="{{ url('/') }}#video" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Watch Video</a>
+                    <a href="{{ url('/') }}#author" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">About Klaus</a>
+                    <a href="{{ url('/') }}#contact" class="text-sm font-medium text-white/85 hover:text-white transition nav-link">Contact Us</a>
+                @endif
                 <a href="{{ url('/') }}#bookconsultationform" class="btn-mexican text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105 cursor-pointer">
                     <i class="fas fa-calendar-check mr-2"></i>Book Consultation
                 </a>
@@ -59,9 +68,15 @@
                 </button>
             </div>
             <div class="flex flex-col gap-6 text-base p-6 mt-2">
-                <a @click="open = false" href="{{ url('/') }}#video" class="text-white/90 hover:text-white transition font-medium nav-link">Watch Video</a>
-                <a @click="open = false" href="{{ url('/') }}#author" class="text-white/90 hover:text-white transition font-medium nav-link">About Klaus</a>
-                <a @click="open = false" href="{{ url('/') }}#contact" class="text-white/90 hover:text-white transition font-medium nav-link">Contact Us</a>
+                @if(!empty($settings->menu))
+                    @foreach($settings->menu as $menuItem)
+                        <a @click="open = false" href="{{ str_starts_with($menuItem['url'], '#') ? url('/') . $menuItem['url'] : $menuItem['url'] }}" class="text-white/90 hover:text-white transition font-medium nav-link">{{ $menuItem['label'] }}</a>
+                    @endforeach
+                @else
+                    <a @click="open = false" href="{{ url('/') }}#video" class="text-white/90 hover:text-white transition font-medium nav-link">Watch Video</a>
+                    <a @click="open = false" href="{{ url('/') }}#author" class="text-white/90 hover:text-white transition font-medium nav-link">About Klaus</a>
+                    <a @click="open = false" href="{{ url('/') }}#contact" class="text-white/90 hover:text-white transition font-medium nav-link">Contact Us</a>
+                @endif
                 <a @click="open = false" href="{{ url('/') }}#bookconsultationform" class="btn-mexican text-center text-white font-bold px-5 py-3.5 rounded-xl mt-4 shadow-lg cursor-pointer"><i class="fas fa-calendar-check mr-2"></i>Book Consultation</a>
             </div>
         </div>
